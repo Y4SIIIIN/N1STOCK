@@ -20,3 +20,12 @@ if(!$telegram) {
     echo json_encode(array('status' => false), 128).PHP_EOL;
     die;
 }
+
+$startKey = json_encode([
+    'keyboard' => [        
+        [
+            ['text' => "PAY"]
+        ], 
+    ],
+    "resize_keyboard" => true, 'one_time_keyboard' => true
+]);
