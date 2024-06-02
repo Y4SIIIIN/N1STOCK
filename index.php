@@ -20,6 +20,10 @@ if(!$telegram) {
     echo json_encode(array('status' => false), 128).PHP_EOL;
     die;
 }
+// Read the incoming update
+$update = json_decode(file_get_contents('php://input'));
+$message = $update->message;
+
 
 $bot_id = /*Enter your Telegram bot ID here*/; 
 
