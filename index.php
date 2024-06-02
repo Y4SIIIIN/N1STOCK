@@ -21,6 +21,9 @@ if(!$telegram) {
     die;
 }
 
+$bot_id = /*Enter your Telegram bot ID here*/; 
+
+
 $startKey = json_encode([
     'keyboard' => [        
         [
