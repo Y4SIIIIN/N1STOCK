@@ -23,7 +23,9 @@ if(!$telegram) {
 // Read the incoming update
 $update = json_decode(file_get_contents('php://input'));
 $message = $update->message;
-
+// Extract chat ID and message text
+$chat_id = $message->chat->id;
+$text = $message->text;
 
 $bot_id = /*Enter your Telegram bot ID here*/; 
 
