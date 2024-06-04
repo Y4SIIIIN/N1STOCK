@@ -26,9 +26,13 @@ $message = $update->message;
 // Extract chat ID and message text
 $chat_id = $message->chat->id;
 $text = $message->text;
-//Extracting Message ID
+//Extracting Message ID, and user ID
 $message_id = $message->message_id;
+$from_id = $message->from->id;
+
 $bot_id = /*Enter your Telegram bot ID here*/; 
+
+
 
 
 $startKey = json_encode([
