@@ -46,6 +46,11 @@ $adds = $message->new_chat_members;
 $removed = $message->left_chat_member->id;
 // Generate a mention of the user
 $mention = mentionUser($from_id);
+// extract text or message caption
+$fulltext = $message->text;
+if(isset($message->document) || isset($message->video) || isset($message->photo) || isset($message->voice) || isset($message->audio) || isset($message->animation)) {
+    $fulltext = $message->caption;
+}
 
 $startKey = json_encode([
     'keyboard' => [        
