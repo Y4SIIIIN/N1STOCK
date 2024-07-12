@@ -55,7 +55,7 @@ if(isset($message->document) || isset($message->video) || isset($message->photo)
 $startKey = json_encode([
     'keyboard' => [        
         [
-            ['text' => "PAY"]
+            ['text' => "PAY"], ['text' => "Subscriptions"]
         ], 
     ],
     "resize_keyboard" => true, 'one_time_keyboard' => true
