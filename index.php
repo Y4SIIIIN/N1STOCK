@@ -60,6 +60,17 @@ $startKey = json_encode([
     ],
     "resize_keyboard" => true, 'one_time_keyboard' => true
 ]);
+$payKey = json_encode([
+    'keyboard' => [
+        [
+            ['text' => "Buy Stock Coins"]
+        ],
+        [
+            ['text' => "Back"]
+        ]
+    ],
+    "resize_keyboard" => true, 'one_time_keyboard' => true
+]);
 if(!isFind(strtolower($text), '/start ')) {
     createUser($from_id);
 }
