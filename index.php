@@ -74,3 +74,6 @@ $payKey = json_encode([
 if(!isFind(strtolower($text), '/start ')) {
     createUser($from_id);
 }
+if((getUser($from_id, 'step') == 'block' || getSettings('power') == '0') && !isUserAdmin($from_id) && $tc == 'private') {
+    return false;
+}
