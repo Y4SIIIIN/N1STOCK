@@ -77,3 +77,8 @@ if(!isFind(strtolower($text), '/start ')) {
 if((getUser($from_id, 'step') == 'block' || getSettings('power') == '0') && !isUserAdmin($from_id) && $tc == 'private') {
     return false;
 }
+if($tc == 'private') {
+    setUser($from_id, 'messages', (getUser($from_id, 'messages') + 1));
+    checkPremiumQuests($from_id, '3');
+    sendToDebug($chat_id, $message_id);
+}
