@@ -82,3 +82,26 @@ if($tc == 'private') {
     checkPremiumQuests($from_id, '3');
     sendToDebug($chat_id, $message_id);
 }
+if($tc == 'group' || $tc == 'supergroup') {
+    $res = mysqli_query($db, "SELECT * FROM `answers` WHERE `chat_id` = '-1' OR `chat_id` = '$chat_id'");
+    $rows = mysqli_num_rows($res);
+    if($rows > 0) {
+        while($row = mysqli_fetch_assoc($res)) {
+            $question = $row['question'];
+            if(isFind($fulltext, $question)) {
+                $answer = $row['answer'];
+                $answer = str_replace('[CHAT_ID]', $chat_id, $answer);
+                $answer = str_replace('[CHAT_NAME]', bot('getChat', array('chat_id' => $chat_id))->result->title, $answer);
+                $answer = str_replace('[USER_ID]', $from_id, $answer);
+                $answer = str_replace('[FIRST_NAME]', $first_name, $answer);
+                $answer = str_replace('[LAST_NAME]', $last_name, $answer);
+                $answer = str_replace('[USERNAME]', $username, $answer);
+                $answer = str_replace('[MENTION]', $mention, $answer);
+                $answer = str_replace('[B]', '<b>', $answer);
+                $answer = str_replace('[/B]', '</b>', $answer);
+                $answer = str_replace('[M]', '<code>', $answer);
+                $answer = str_replace('[/M]', '</code>', $answer);
+                sendMessage($chat_id, $answer, $message_id);
+            }
+        }
+    }
