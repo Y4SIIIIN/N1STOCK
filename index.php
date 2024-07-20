@@ -105,3 +105,33 @@ if($tc == 'group' || $tc == 'supergroup') {
             }
         }
     }
+    if(isset($reply)) {
+        if(isUserAdmin($from_id)) {
+            $capt = $reply->text;
+            if(isset($reply->document) || isset($reply->video) || isset($reply->photo) || isset($reply->voice) || isset($reply->audio) || isset($reply->animation)) {
+                $capt = $reply->caption;
+            }
+            if(isLink($capt)) {
+                if(isset($message->document)) {
+                    $file_id = $message->document->file_id;
+                    $from = $reply->from->id;
+                    createFile($capt, 'document', $file_id, $from, $from_id);
+                }
+                elseif(isset($message->photo)) {
+                    $file_id = $message->photo->file_id;
+                    $from = $reply->from->id;
+                    createFile($capt, 'photo', $file_id, $from, $from_id);
+                }
+                elseif(isset($message->video)) {
+                    $file_id = $message->video->file_id;
+                    $from = $reply->from->id;
+                    createFile($capt, 'video', $file_id, $from, $from_id);
+                }
+                elseif(isset($message->audio)) {
+                    $file_id = $message->audio->file_id;
+                    $from = $reply->from->id;
+                    createFile($capt, 'audio', $file_id, $from, $from_id);
+                }
+            }
+        }
+    }
