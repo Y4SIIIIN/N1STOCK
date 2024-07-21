@@ -135,3 +135,23 @@ if($tc == 'group' || $tc == 'supergroup') {
             }
         }
     }
+    else {
+        if(isset($message->document)) {
+            if(isUserAdmin($from_id) && getUserAdmin($from_id) > 1) {
+                $file_id = $message->document->file_id;
+                $name = $message->document->file_name;
+                if(isFind($name, 'shutterstock_')) {
+                    $id = (int) filter_var($name, FILTER_SANITIZE_NUMBER_INT);
+                    if(isset($id) && !empty($id) && is_numeric($id)) {
+                        $res = mysqli_query($db, "SELECT * FROM `files` WHERE `link` LIKE '%shutterstock.com%' AND `link` LIKE '%$id%'");
+                        $rows = mysqli_num_rows($res);
+                        if($rows < 1) {
+                            $link = "https://shutterstock.com/$id";
+                            createFile($link, 'document', $file_id, $from_id, $from_id);
+                        }
+                    }
+                }
+            }
+        }
+    }
+
