@@ -206,6 +206,17 @@ if($tc == 'group' || $tc == 'supergroup') {
                         }
                     }
                 }
+                elseif(isFind($name, 'Gettyimages_')) {
+                    $id = (int) filter_var($name, FILTER_SANITIZE_NUMBER_INT);
+                    if(isset($id) && !empty($id) && is_numeric($id)) {
+                        $res = mysqli_query($db, "SELECT * FROM `files` WHERE `link` LIKE '%gettyimages.com%' AND `link` LIKE '%$id%'");
+                        $rows = mysqli_num_rows($res);
+                        if($rows < 1) {
+                            $link = "https://www.gettyimages.com/$id";
+                            createFile($link, 'document', $file_id, $from_id, $from_id);
+                        }
+                    }
+                }
             }
         }
     }
