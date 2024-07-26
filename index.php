@@ -228,6 +228,50 @@ if($tc == 'group' || $tc == 'supergroup') {
                         }
                     }
                 }
+                elseif(isFind($name, 'Yellowimages_')) {
+                    $id = (int) filter_var($name, FILTER_SANITIZE_NUMBER_INT);
+                    if(isset($id) && !empty($id) && is_numeric($id)) {
+                        $res = mysqli_query($db, "SELECT * FROM `files` WHERE `link` LIKE '%yellowimages.com%' AND `link` LIKE '%$id%'");
+                        $rows = mysqli_num_rows($res);
+                        if($rows < 1) {
+                            $link = "https://yellowimages.com/$id";
+                            createFile($link, 'document', $file_id, $from_id, $from_id);
+                        }
+                    }
+                }
+                elseif(isFind($name, '123rf_')) {
+                    $id = (int) filter_var($name, FILTER_SANITIZE_NUMBER_INT);
+                    if(isset($id) && !empty($id) && is_numeric($id)) {
+                        $res = mysqli_query($db, "SELECT * FROM `files` WHERE `link` LIKE '%123rf.com%' AND `link` LIKE '%$id%'");
+                        $rows = mysqli_num_rows($res);
+                        if($rows < 1) {
+                            $link = "https://123rf.com/$id";
+                            createFile($link, 'document', $file_id, $from_id, $from_id);
+                        }
+                    }
+                }
+                elseif(isFind($name, 'iconscout_')) {
+                    $id = (int) filter_var($name, FILTER_SANITIZE_NUMBER_INT);
+                    if(isset($id) && !empty($id) && is_numeric($id)) {
+                        $res = mysqli_query($db, "SELECT * FROM `files` WHERE `link` LIKE '%iconscout.com%' AND `link` LIKE '%$id%'");
+                        $rows = mysqli_num_rows($res);
+                        if($rows < 1) {
+                            $link = "https://iconscout.com/$id";
+                            createFile($link, 'document', $file_id, $from_id, $from_id);
+                        }
+                    }
+                }
+                elseif(isFind($name, 'pngtree_')) {
+                    $id = (int) filter_var($name, FILTER_SANITIZE_NUMBER_INT);
+                    if(isset($id) && !empty($id) && is_numeric($id)) {
+                        $res = mysqli_query($db, "SELECT * FROM `files` WHERE `link` LIKE '%pngtree.com%' AND `link` LIKE '%$id%'");
+                        $rows = mysqli_num_rows($res);
+                        if($rows < 1) {
+                            $link = "https://pngtree.com/$id";
+                            createFile($link, 'document', $file_id, $from_id, $from_id);
+                        }
+                    }
+                }
             }
         }
     }
