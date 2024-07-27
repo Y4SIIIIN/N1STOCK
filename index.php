@@ -275,4 +275,32 @@ if($tc == 'group' || $tc == 'supergroup') {
             }
         }
     }
-
+    if(isLink($fulltext)) {
+        $send = true;
+        $linksinfo = getTodayLinks($from_id, $chat_id);
+        $links = $linksinfo['links'];
+        $credits = $linksinfo['credits'];
+        $gadmin = isChatAdmin($from_id, $chat_id);
+        $rank = getChatMember($chat_id, $from_id);
+        $channel = getSettings('post_channel');
+        $crank = getChatMember($channel, $from_id);
+        $maxlinks = getChats($chat_id, 'links');
+        $trials = getChats($chat_id, 'trials');
+        $domain = getDomain($fulltext);
+        $double = 1;
+        $credit = 1;
+        if(getUser($from_id, 'double') > '0') {
+            $double = getUser($from_id, 'double');
+        }
+        if(isCreditExist($domain)) {
+            $credit = getCredit($domain, 'price');
+        }
+        if($crank == 'left' && !isUserAdmin($from_id) && !$gadmin) {
+            $link = createChatInviteLink($channel, null);
+            if(isLink($link)) {
+                deleteMessage($chat_id, $message_id);
+                sendMessage($chat_id, "[$mention]\n<b>You should join our channel to send links here</b>", -1, retIKey14($link));
+                $send = false;
+                return false;
+            }
+        }
