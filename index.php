@@ -304,3 +304,15 @@ if($tc == 'group' || $tc == 'supergroup') {
                 return false;
             }
         }
+        $left = strtotime('tomorrow') - time();
+        $data = secondsToTime($left);
+        $hours = $data['hours'];
+        $minutes = $data['minutes'];
+        $seconds = $data['seconds'];
+        $allowed = ($maxlinks * $double);
+        $action = ($allowed - $credits);
+        $extra = "\n";
+        if($action > 0) {
+            $extra = "\n<b>Remaining Credits:</b> <code>$action</code><b>/</b><code>$allowed</code> <b>(Link's Credit: </b><code>$credit</code><b>)</b>\n";
+        }
+        $trial_sent = false;
