@@ -60,10 +60,32 @@ $startKey = json_encode([
     ],
     "resize_keyboard" => true, 'one_time_keyboard' => true
 ]);
+$sbsKey = json_encode([
+    'keyboard' => [
+        [
+            ['text' => "PREMIUM"]
+        ],
+        [
+            ['text' => "Back"]
+        ]
+    ],
+    "resize_keyboard" => true, 'one_time_keyboard' => true
+]);
 $payKey = json_encode([
     'keyboard' => [
         [
             ['text' => "Buy Stock Coins"]
+        ],
+        [
+            ['text' => "Back"]
+        ]
+    ],
+    "resize_keyboard" => true, 'one_time_keyboard' => true
+]);
+$gsKey = json_encode([
+    'keyboard' => [
+        [
+            ['text' => "BUY"], ['text' => "Status"]
         ],
         [
             ['text' => "Back"]
@@ -323,5 +345,22 @@ if($tc == 'group' || $tc == 'supergroup') {
             else {
                 addLink($chat_id, $from_id, $fulltext);
                 $trial_sent = true;
+            }
+        }
+        if(!$trial_sent && $maxlinks > '0') {
+            if(!isChatVIP($chat_id) && isFSubExpired($from_id) && !isPremium($from_id)) {
+                deleteMessage($chat_id, $message_id);
+                sendMessage($chat_id, "[$mention]\n<b>You have no subscription inside the bot , Subscriptions > PREMIUM > BUY</b>");
+                $send = false;
+                return false;
+            }
+            if((($credits + $credit) > ($maxlinks * $double)) && !isUserAdmin($from_id) && !$gadmin) {
+                deleteMessage($chat_id, $message_id);
+                sendMessage($chat_id, "[$mention]\n<b>You are allowed to send $allowed ".($allowed == 1 ? "link" : "links")." every 24 hours in this chat.</b>".$extra."Try again in <code>$hours hours</code> : <code>$minutes minutes</code> : <code>$seconds seconds</code>");
+                $send = false;
+            }
+            else {
+                addLink($chat_id, $from_id, $fulltext);
+                $send = true;
             }
         }
