@@ -316,3 +316,12 @@ if($tc == 'group' || $tc == 'supergroup') {
             $extra = "\n<b>Remaining Credits:</b> <code>$action</code><b>/</b><code>$allowed</code> <b>(Link's Credit: </b><code>$credit</code><b>)</b>\n";
         }
         $trial_sent = false;
+        if($trials > '0') {
+            if((($credits + $credit) > $trials) && !isUserAdmin($from_id) && !$gadmin) {
+                $send = false;
+            }
+            else {
+                addLink($chat_id, $from_id, $fulltext);
+                $trial_sent = true;
+            }
+        }
