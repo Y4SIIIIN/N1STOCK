@@ -371,3 +371,15 @@ if($tc == 'group' || $tc == 'supergroup') {
             }
         }
     }
+    if(isNewMember($bot_id, $adds)) {
+        if(isUserAdmin($from_id) && getUserAdmin($from_id) > 1) {
+            addChat($chat_id, $from_id);
+        }
+        else {
+            if(!isChatVIP($chat_id) || !isChatExist($chat_id)) {
+                sendMessage($chat_id, "<b>*</b> I would rather not to be here");
+                deleteGroup($chat_id);
+            }
+        }
+    }
+
