@@ -382,4 +382,8 @@ if($tc == 'group' || $tc == 'supergroup') {
             }
         }
     }
+    addChat($chat_id, -1);
 
+    if($removed == $bot_id) {
+        deleteGroup($chat_id);
+    }
