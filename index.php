@@ -364,3 +364,10 @@ if($tc == 'group' || $tc == 'supergroup') {
                 $send = true;
             }
         }
+        if($send) {
+            sleep(3);
+            if(isMessageExist($chat_id, $message_id)) {
+                sendFile($from_id, $chat_id, $fulltext, $message_id);
+            }
+        }
+    }
