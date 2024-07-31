@@ -66,6 +66,9 @@ $sbsKey = json_encode([
             ['text' => "PREMIUM"]
         ],
         [
+            ['text' => "Continental Hotel"]
+        ],
+        [
             ['text' => "Back"]
         ]
     ],
@@ -387,3 +390,27 @@ if($tc == 'group' || $tc == 'supergroup') {
     if($removed == $bot_id) {
         deleteGroup($chat_id);
     }
+    if(isChatVIP($chat_id)) {
+        if(isUserExist($removed) && !isSubExpired($removed)) {
+            $link = createChatInviteLink($chat_id, getUser($removed, 'subscription'));
+            sendMessage($removed, "<code>*</code> You left a VIP group <b>with active subscription</b>.\nJoin back with link below whenever you want", -1, retIKey11($link));
+            setUser($removed, 'alarm', '0');
+        }
+        $data = objectToArrays($adds);
+        if(sizeof($data) > 0) {
+            for($i = 0; $i < sizeof($data); $i ++) {
+                $id = $data[$i]['id'];
+                if((isSubExpired($id) || !isUserExist($id)) && $id != $bot_id) {
+                    $mention = mentionUser($id);
+                    banChatMember($chat_id, $id);
+                    setUser($id, 'alarm', '0');
+                    sendMessage($chat_id, "<code>*</code> User $mention joined group <b>without any group subscriptions</b>. (<b>Kicked</b>)");
+                }
+            }
+        }
+        if((!isUserExist($from_id) || isSubExpired($from_id)) && $from_id != $bot_id) {
+            banChatMember($chat_id, $from_id);
+            sendMessage($chat_id, "<code>*</code> User $mention's subscription expired. (<b>Kicked</b>)");
+            }
+        }
+ 
