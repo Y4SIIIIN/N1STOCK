@@ -413,4 +413,20 @@ if($tc == 'group' || $tc == 'supergroup') {
             sendMessage($chat_id, "<code>*</code> User $mention's subscription expired. (<b>Kicked</b>)");
             }
         }
+        if(strtolower($text) == '/install' || strtolower($text) == strtolower("/install@$bot_username")) {
+            if(isUserAdmin($from_id) && getUserAdmin($from_id) > 1) {
+                if(getChatMember($chat_id, $bot_id) == 'administrator') {
+                    if(isChatVIP($chat_id)) {
+                    sendMessage($chat_id, "This chat is already installed as a VIP chat", $message_id);
+                    }
+                    else {
+                        setChats($chat_id, 'vip', '1');
+                        sendMessage($chat_id, "This chat is now installed as a VIP chat", $message_id);
+                    }
+                }
+                else {
+                    sendMessage($chat_id, "Robot is not admin in this chat\nTry again when you made me an admin of this chat", $message_id);
+                }
+            }
+        }
  
