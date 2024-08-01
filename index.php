@@ -429,4 +429,10 @@ if($tc == 'group' || $tc == 'supergroup') {
                 }
             }
         }
+        if(strtolower($text) == '/uninstall' || strtolower($text) == strtolower("/uninstall@$bot_username")) {
+            if(isUserAdmin($from_id) && getUserAdmin($from_id) > 1) {
+                sendMessage($chat_id, "Uninstalled chat", $message_id);
+                deleteGroup($chat_id);
+            }
+        }
  
