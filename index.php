@@ -447,4 +447,75 @@ if($tc == 'group' || $tc == 'supergroup') {
         }
     }
 }
+if($update->callback_query) {
+    $id = $update->callback_query->id;
+	$tc = $update->callback_query->message->chat->type;
+    $chatid = $update->callback_query->message->chat->id;
+	$fromid = $update->callback_query->from->id;
+	$firstname = $update->callback_query->from->first_name;
+	$lastname = $update->callback_query->from->last_name;
+    $messageid = $update->callback_query->message->message_id;
+	$cusername = $update->callback_query->from->username;
+    $data = $update->callback_query->data;
+    $mention = mentionUser($fromid);
+    if(isFind($data, 'acc_')) {
+        if(isUserAdmin($fromid)) {
+            $target = str_replace('acc_', '', explode(':', $data)[0]);
+            $price = explode(':', $data)[1];
+            $pid = explode(':', $data)[2];
+            $amount = explode(':', $data)[3];
+            if(isPaymentExist($pid)) {
+                if(getPayment($pid, 'status') == '0') {
+                    $mention2 = mentionUser($target);
+                    if(isUserExist($target)) {
+                        setPayment($pid, 'status', '1');
+                        setUser($target, 'balance', (getUser($target, 'balance') + $amount));
+                        sendMessage($target, "Your #Payment accepted\n<code>$amount</code> Stock Coins added to your wallet");
+                        answerCallbackQuery($id, "Payment accepted. $amount Stock Coins added to $target's wallet");
+                        sendAdminMessage("#admin\nUser $mention2's #Payment(dbID:<code>$pid</code>) has accepted by admin $mention");
+                        checkReferralPrize($target, $amount);
+                    }
+                    else {
+                        answerCallbackQuery($id, "An error occurred");
+                    }
+                }
+                else {
+                    answerCallbackQuery($id, "This payment is already accepted");
+                }
+            }
+            else {
+                answerCallbackQuery($id, "An error occurred");
+            }
+        }
+        else {
+            answerCallbackQuery($id, "An error occurred");
+        }
+        return true;
+    }
+    elseif(isFind($data, 'rej_')) {
+        if(isUserAdmin($fromid)) {
+            $target = str_replace('rej_', '', $data);
+            $dbid = explode(':', $target)[1];
+            $target = explode(':', $target)[0];
+            if(isPaymentExist($dbid)) {
+                if(getPayment($dbid, 'status') == '0') {
+                    $mention2 = mentionUser($target);
+                    setPayment($dbid, 'status', '-1');
+                    answerCallbackQuery($id, "Payment rejected");
+                    sendMessage($target, "Your #Payment rejected");
+                    sendAdminMessage("#admin\nUser $mention2's #Payment(dbID:<code>$dbid</code>) has rejected by admin $mention");
+                }
+                else {
+                    answerCallbackQuery($id, "This payment is already accepted/rejected");
+                }
+            }
+            else {
+                answerCallbackQuery($id, "An error occurred");
+            }
+        }
+        else {
+            answerCallbackQuery($id, "An error occurred");
+        }
+        return true;
+    }
  
