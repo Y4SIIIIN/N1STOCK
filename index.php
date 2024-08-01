@@ -435,4 +435,16 @@ if($tc == 'group' || $tc == 'supergroup') {
                 deleteGroup($chat_id);
             }
         }
+        if(strtolower($text) == '/api' || strtolower($text) == strtolower("/api@$bot_username")) {
+            if(isUserAdmin($from_id) && getUserAdmin($from_id) > 1) {
+                if(getChats($chat_id, 'api') < '1' || isChatVIP($chat_id)) {
+                    setChats($chat_id, 'api', '1');
+                }
+                else {
+                    setChats($chat_id, 'api', '0');
+                }
+            sendMessage($chat_id, "<b>*</b> This chat is <b>".(getChats($chat_id, 'api') < '1' ? "not accepting" : "accepting")."</b> API things ".(getChats($chat_id, 'api') < '1' ? "anymore" : "from now on"), $message_id);
+        }
+    }
+}
  
