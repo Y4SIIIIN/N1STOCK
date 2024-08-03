@@ -449,7 +449,7 @@ if($tc == 'group' || $tc == 'supergroup') {
 }
 if($update->callback_query) {
     $id = $update->callback_query->id;
-	$tc = $update->callback_query->message->chat->type;
+    $tc = $update->callback_query->message->chat->type;
     $chatid = $update->callback_query->message->chat->id;
 	$fromid = $update->callback_query->from->id;
 	$firstname = $update->callback_query->from->first_name;
@@ -518,4 +518,23 @@ if($update->callback_query) {
         }
         return true;
     }
- 
+    elseif(isFind($data, 'refund_')) {
+        $d = str_replace('refund_', '', $data);
+        $target = explode(':', $d)[0];
+        $payment = explode(':', $d)[1];
+        $price = explode(':', $d)[2];
+        if(isUserAdmin($fromid)) {
+            if(getUserAdmin($fromid) > 1) {
+                $refunded = getPayment($payment, 'refunded');
+                if($refunded == '0') {
+                    setPayment($payment, 'refunded', '1');
+                    setUser($target, 'balance', (getUser($target, 'balance') + $price));
+                    sendMessage($target, "<b>$price Stock Coins</b> has refunded #Payment(dbID:<code>$payment</code>)");
+                    answerCallbackQuery($id, "$price Stock Coins has refunded successfully");
+                }
+                else {
+                    answerCallbackQuery($id, "Payment is already refunded");
+                }
+            }
+        }
+    }
