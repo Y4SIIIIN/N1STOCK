@@ -448,16 +448,16 @@ if($tc == 'group' || $tc == 'supergroup') {
     }
 }
 if($update->callback_query) {
-    $id = $update->callback_query->id;
-    $tc = $update->callback_query->message->chat->type;
-    $chatid = $update->callback_query->message->chat->id;
+	$id = $update->callback_query->id;
+	$tc = $update->callback_query->message->chat->type;
+	$chatid = $update->callback_query->message->chat->id;
 	$fromid = $update->callback_query->from->id;
 	$firstname = $update->callback_query->from->first_name;
 	$lastname = $update->callback_query->from->last_name;
-    $messageid = $update->callback_query->message->message_id;
+	$messageid = $update->callback_query->message->message_id;
 	$cusername = $update->callback_query->from->username;
-    $data = $update->callback_query->data;
-    $mention = mentionUser($fromid);
+	$data = $update->callback_query->data;
+	$mention = mentionUser($fromid);
     if(isFind($data, 'acc_')) {
         if(isUserAdmin($fromid)) {
             $target = str_replace('acc_', '', explode(':', $data)[0]);
