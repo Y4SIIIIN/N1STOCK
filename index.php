@@ -538,3 +538,17 @@ if($update->callback_query) {
             }
         }
     }
+    elseif(isFind($data, 'msg_')) {
+        $target = str_replace('msg_', '', $data);
+        if(isUserAdmin($fromid)) {
+            if(isUserExist($target)) {
+                $mention = mentionUser($target);
+                setUser($fromid, 'step', "msg_$target");
+                sendMessage($chatid, "Send me your message for sending to user $mention", $messageid, $backKey);
+            }
+            else {
+                answerCallbackQuery($id, "An error has occurred");
+            }
+        }
+        return true;
+    }
