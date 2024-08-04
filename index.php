@@ -552,3 +552,11 @@ if($update->callback_query) {
         }
         return true;
     }
+    elseif(isFind($data, 'prev_')) {
+        $info = str_replace('prev_', '', $data);
+        $dbid = explode(':', $info)[0];
+        $page = explode(':', $info)[1];
+        $prev = ($page - 1);
+        $pages = sizeof(getPayments($fromid, 0));
+        $payments = getPayments($fromid, $dbid, 0);
+
