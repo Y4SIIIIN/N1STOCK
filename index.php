@@ -559,4 +559,17 @@ if($update->callback_query) {
         $prev = ($page - 1);
         $pages = sizeof(getPayments($fromid, 0));
         $payments = getPayments($fromid, $dbid, 0);
+	if(sizeof($payments) > 0 && $payments != '-1') {
+            $payment = $payments[(sizeof($payments) - 1)];
+            $iid = getPayment($payment, 'id');
+            $product_id = getPayment($payment, 'product_id');
+            $pid = explode('_', $product_id)[1];
+            $product = "NOT AVAILABLE";
+            $cost = getPayment($payment, 'cost');
+            $discount = getPayment($payment, 'discount');
+            $email = getPayment($payment, 'email');
+            $status = getPayment($payment, 'status');
+            $time = getPayment($payment, 'time');
+            $time = date('Y-m-d H:i:s', $time);
+            $price = "$cost";
 
