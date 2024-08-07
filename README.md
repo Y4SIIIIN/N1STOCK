@@ -3,11 +3,13 @@ We will provide you the codes of a Telegram bot in PHP language with complete ex
 
 ## NOTE
 
-**Archive files are available only in my groups and channels, and the files in the database are with standard licenses.**
+**The files sent in the groups are educational (standard license) and their sale is illegal**
 
-For more information, you can join our group: [ShutterStock](https://t.me/ShutterStock4U)
+You can join our groups:
+ [ShutterStock](https://t.me/ShutterStock4U)
+  [AdobeStock](https://t.me/AdobeStock4U)
 
-To access resources and test the bot's functionality in the group, you can check this group.
+To access resources and test the bot's functionality in the group, you can check [N1STOCK BOT](https://t.me/N1Stock_Bot)
 
 
 <p align="center">
