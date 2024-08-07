@@ -53,7 +53,11 @@ if(isset($message->document) || isset($message->video) || isset($message->photo)
 }
 
 $startKey = json_encode([
-    'keyboard' => [        
+    'keyboard' => [
+
+	[
+            ['text' => "LenZzZ"]
+        ],
         [
             ['text' => "PAY"], ['text' => "Subscriptions"]
         ], 
@@ -572,4 +576,9 @@ if($update->callback_query) {
             $time = getPayment($payment, 'time');
             $time = date('Y-m-d H:i:s', $time);
             $price = "$cost";
+
+elseif(strtolower($text) == 'lenzzz' && $tc == 'private') {
+    $inline_keyboard = json_encode([ 'inline_keyboard' => [ [ [ 'text' => 'Launch WebApp', 'web_app' => ['url' => 'https://y4siiiin.com/'] ] ] ] ]);
+    sendMessage($chat_id, "Morning,\nIn LenzZz, you can watch your needs", $message_id, $inline_keyboard);   
+}
 
