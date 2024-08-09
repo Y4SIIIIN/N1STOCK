@@ -576,6 +576,28 @@ if($update->callback_query) {
             $time = getPayment($payment, 'time');
             $time = date('Y-m-d H:i:s', $time);
             $price = "$cost";
+	    if($price < '1') {
+                $price = "FREE";
+            }
+            if($discount > '0') {
+                $price .= " ($discount% DISCOUNT)";
+            }
+            if($email == '-1') {
+                $email = "NOT ENTERED";
+            }
+            if($status == '-1') {
+                $status = "NOT CONFIRMED";
+            }
+            else {
+                $status = "CONFIRMED";
+            }
+            if(isFind($product_id, 'PROD_')) {
+                if(mysqli_num_rows(mysqli_query($db, "SELECT * FROM `products` WHERE `id` = '$pid'")) > 0) {
+                	while($row = mysqli_fetch_assoc($res)) {
+                	    $product = "Product ".$row['name'];
+                	}
+                }
+            }
 
 elseif(strtolower($text) == 'lenzzz' && $tc == 'private') {
     $inline_keyboard = json_encode([ 'inline_keyboard' => [ [ [ 'text' => 'Launch WebApp', 'web_app' => ['url' => 'https://y4siiiin.com/'] ] ] ] ]);
