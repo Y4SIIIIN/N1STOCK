@@ -598,6 +598,12 @@ if($update->callback_query) {
                 	}
                 }
             }
+            elseif(isFind($product_id, 'BSSC_')) {
+                $product = "$cost Stock Coins Requested";
+            }
+            elseif(isFind($product_id, 'BSTON_')) {
+                $product = "$cost Stock Coins TON Requested";
+            }
 
 elseif(strtolower($text) == 'lenzzz' && $tc == 'private') {
     $inline_keyboard = json_encode([ 'inline_keyboard' => [ [ [ 'text' => 'Launch WebApp', 'web_app' => ['url' => 'https://y4siiiin.com/'] ] ] ] ]);
