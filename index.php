@@ -609,10 +609,37 @@ if($update->callback_query) {
         }
         return true;
     }
+    elseif(isFind($data, 'nxt_')) {
+        $info = str_replace('nxt_', '', $data);
+        $dbid = explode(':', $info)[0];
+        $page = explode(':', $info)[1];
+        $next = ($page + 1);
+        $pages = sizeof(getPayments($fromid, 0));
+        $payments = getPayments($fromid, $dbid);
+        if(sizeof($payments) > 0 && $payments != '-1') {
+            $payment = $payments[0];
+            $iid = getPayment($payment, 'id');
+            $product_id = getPayment($payment, 'product_id');
+            $pid = explode('_', $product_id)[1];
+            $product = "NOT AVAILABLE";
+            $cost = getPayment($payment, 'cost');
+            $discount = getPayment($payment, 'discount');
+            $email = getPayment($payment, 'email');
+            $status = getPayment($payment, 'status');
+            $time = getPayment($payment, 'time');
+            $time = date('Y-m-d H:i:s', $time);
+            $price = "$cost Stock Coins";
+            if($discount > '0') {
+                $price .= " ($discount% DISCOUNT)";
+            }
+            if($email == '-1') {
+                $email = "NOT ENTERED";
+            }
+            if($status == '-1') {
+                $status = "NOT CONFIRMED";
+            }
+            else {
+                $status = "CONFIRMED";
+            }
 
-
-elseif(strtolower($text) == 'lenzzz' && $tc == 'private') {
-    $inline_keyboard = json_encode([ 'inline_keyboard' => [ [ [ 'text' => 'Launch WebApp', 'web_app' => ['url' => 'https://y4siiiin.com/'] ] ] ] ]);
-    sendMessage($chat_id, "Morning,\nIn LenzZz, you can watch your needs", $message_id, $inline_keyboard);   
-}
 
