@@ -54,10 +54,6 @@ if(isset($message->document) || isset($message->video) || isset($message->photo)
 
 $startKey = json_encode([
     'keyboard' => [
-
-	[
-            ['text' => "LenZzZ"]
-        ],
         [
             ['text' => "PAY"], ['text' => "Subscriptions"]
         ], 
@@ -81,7 +77,7 @@ $sbsKey = json_encode([
 $payKey = json_encode([
     'keyboard' => [
         [
-            ['text' => "Buy Stock Coins"]
+            ['text' => "Buy Stock Coins"], ['text' => "My Payments"]
         ],
         [
             ['text' => "Back"]
@@ -93,6 +89,17 @@ $gsKey = json_encode([
     'keyboard' => [
         [
             ['text' => "BUY"], ['text' => "Status"]
+        ],
+        [
+            ['text' => "Back"]
+        ]
+    ],
+    "resize_keyboard" => true, 'one_time_keyboard' => true
+]);
+$buysKey = json_encode([
+    'keyboard' => [
+        [
+            ['text' => "TON"]
         ],
         [
             ['text' => "Back"]
@@ -641,5 +648,16 @@ if($update->callback_query) {
             else {
                 $status = "CONFIRMED";
             }
-
+	    elseif(isFind($product_id, 'BSTON_')) {
+                $product = "$cost Stock Coins TON Requested";
+            }
+	    elseif($data == 'chg_ton') {
+        if(isUserAdmin($fromid)) {
+            if(getUserAdmin($fromid) > 1) {
+                setUser($fromid, 'step', 'chg_ton');
+                sendMessage($chatid, "Send me the new address for <b>TON</b>", $messageid, $backKey);
+            }
+        }
+        return true;
+    }
 
