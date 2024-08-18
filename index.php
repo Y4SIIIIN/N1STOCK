@@ -20,10 +20,10 @@ if(!$telegram) {
     echo json_encode(array('status' => false), 128).PHP_EOL;
     die;
 }
-// Read the incoming update
 $update = json_decode(file_get_contents('php://input'));
+//Using PHP Object for Telegram API
 $message = $update->message;
-// Extract chat ID and message text
+
 $chat_id = $message->chat->id;
 $text = $message->text;
 // Extract message ID, user ID, chat type, first name, last name, username, reply-to message, forward-from ID, and forward-from chat ID
