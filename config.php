@@ -1,3 +1,4 @@
+<?php
 function getIP() {
     if (!empty($_SERVER['HTTP_CLIENT_IP'])) {
         return $_SERVER['HTTP_CLIENT_IP'];
@@ -7,3 +8,4 @@ function getIP() {
         return $_SERVER['REMOTE_ADDR'];
     }
 }
+?>
