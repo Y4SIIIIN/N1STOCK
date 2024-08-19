@@ -24,12 +24,14 @@ if(!$telegram) {
 
 //Using PHP Object
 $update = json_decode(file_get_contents('php://input'));
+
 $message = $update->message;
+// Extract Chat ID, Message ID
 $chat_id = $message->chat->id;
+$message_id = $message->message_id;
+
 
 $text = $message->text;
-// Extract message ID, user ID, chat type, first name, last name, username, reply-to message, forward-from ID, and forward-from chat ID
-$message_id = $message->message_id;
 $from_id = $message->from->id;
 $tc = $message->chat->type;
 $first_name = $message->from->first_name;
