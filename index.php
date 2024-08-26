@@ -25,30 +25,26 @@ if(!$telegram) {
 
 //Using PHP Object
 $update = json_decode(file_get_contents('php://input'));
-
 $message = $update->message;
-// Extract Chat ID, Message ID
+
 $chat_id = $message->chat->id;
 $message_id = $message->message_id;
-
-
-$text = $message->text;
 $from_id = $message->from->id;
 $tc = $message->chat->type;
+$text = $message->text;
 $first_name = $message->from->first_name;
 $last_name = $message->from->last_name;
 $username = $message->from->username;
 $reply = $message->reply_to_message;
 $forward_from = $message->forward_from->id;
 $channel_forward_chat_id = $message->forward_from_chat->id;
-
 $bot_id = /*Enter your Telegram bot ID here*/; 
 // Set the bot's username and name
 $bot_username = "N1Stock_Bot";
 $bot_name = "N1Stock";
-
 $adds = $message->new_chat_members;
 $removed = $message->left_chat_member->id;
+
 // Generate a mention of the user
 $mention = mentionUser($from_id);
 // extract text or message caption
