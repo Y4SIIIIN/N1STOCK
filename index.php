@@ -28,8 +28,8 @@ $update = json_decode(file_get_contents('php://input'));
 $message = $update->message;
 $chat_id = $message->chat->id;
 $message_id = $message->message_id;
-
 $from_id = $message->from->id;
+
 $tc = $message->chat->type;
 $text = $message->text;
 $first_name = $message->from->first_name;
