@@ -37,9 +37,9 @@ $username = $message->from->username;
 $reply = $message->reply_to_message;
 $forward_from = $message->forward_from->id;
 $channel_forward_chat_id = $message->forward_from_chat->id;
-
 $bot_id = /*Enter your Telegram bot ID here*/; 
 // Set the bot's username and name
+
 $bot_username = "N1Stock_Bot";
 $bot_name = "N1Stock";
 $adds = $message->new_chat_members;
