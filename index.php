@@ -42,7 +42,6 @@ $bot_id = /*Enter your Telegram bot ID here*/;
 $bot_username = "N1Stock_Bot";
 $bot_name = "N1Stock";
 $adds = $message->new_chat_members;
-
 $removed = $message->left_chat_member->id;
 
 // Generate a mention of the user
