@@ -47,10 +47,11 @@ $removed = $message->left_chat_member->id;
 $mention = mentionUser($from_id);
 
 // extract text or message caption
-$fulltext = $message->text;
-if(isset($message->document) || isset($message->video) || isset($message->photo) || isset($message->voice) || isset($message->audio) || isset($message->animation)) {
-    $fulltext = $message->caption;
-}
+$fulltext = $message->text ?? null;
+if (isset($message->document) || isset($message->video) || isset($message->photo) || isset($message->voice) || isset($message->audio) || isset($message->animation)) { 
+	$fulltext = $message->caption ?? $fulltext; }
+
+
 
 $startKey = json_encode([
     'keyboard' => [
