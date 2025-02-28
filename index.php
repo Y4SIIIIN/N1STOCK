@@ -45,22 +45,23 @@ $adds = $message->new_chat_members;
 $removed = $message->left_chat_member->id;
 // Generate a mention of the user
 $mention = mentionUser($from_id);
-
 // extract text or message caption
 $fulltext = $message->text ?? null;
 if (isset($message->document) || isset($message->video) || isset($message->photo) || isset($message->voice) || isset($message->audio) || isset($message->animation)) { 
 	$fulltext = $message->caption ?? $fulltext; }
 
-
-
 $startKey = json_encode([
-    'keyboard' => [
-        [
-            ['text' => "PAY"], ['text' => "Subscriptions"]
-        ], 
-    ],
-    "resize_keyboard" => true, 'one_time_keyboard' => true
-]);
+	'keyboard' => [         
+		[             
+			['text' => "MiniApp"]
+		],         
+		[             
+			['text' => "PAY"], ['text' => "Subscriptions"]         
+		],     
+			],     
+		"resize_keyboard" => true,	"one_time_keyboard" => false,	"input_field_placeholder" => "Please click. What are you waiting for ?..." 
+		]);
+
 $sbsKey = json_encode([
     'keyboard' => [
         [
