@@ -56,10 +56,13 @@ $startKey = json_encode([
 			['text' => "MiniApp"]
 		],         
 		[             
-			['text' => "PAY"], ['text' => "Subscriptions"]         
-		],     
+			['text' => "PAY"], ['text' => "Subscriptions"] 
+		],
+		[
+			['text' => "Products"]
+		],
 			],     
-		"resize_keyboard" => true,	"one_time_keyboard" => false,	"input_field_placeholder" => "Please click. What are you waiting for ?..." 
+		"resize_keyboard" => true,	"one_time_keyboard" => false,	"input_field_placeholder" => "Please click ↓" 
 		]);
 
 $sbsKey = json_encode([
