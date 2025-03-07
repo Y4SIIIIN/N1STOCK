@@ -59,7 +59,7 @@ $startKey = json_encode([
 			['text' => "PAY"], ['text' => "Subscriptions"] 
 		],
 		[
-			['text' => "Products"]
+			['text' => "Products"], ['text' => "Sellers Panel"]
 		],
 			],     
 		"resize_keyboard" => true,	"one_time_keyboard" => false,	"input_field_placeholder" => "Please click ↓" 
