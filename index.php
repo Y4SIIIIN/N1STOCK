@@ -64,6 +64,9 @@ $startKey = json_encode([
 	        [
            		['text' => "Invite People"], ['text' => "HELP"], ['text' => "Contact"]
         	],
+		[
+            		['text' => "API Access"]
+        	]
 			],     
 		"resize_keyboard" => true,	"one_time_keyboard" => false,	"input_field_placeholder" => "Please click ↓" 
 		]);
