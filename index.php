@@ -88,7 +88,7 @@ $sbsKey = json_encode([
 $payKey = json_encode([
     'keyboard' => [
         [
-            ['text' => "Buy Stock Coins"], ['text' => "My Payments"]
+            ['text' => "Buy Stock Coins"], ['text' => "Transfer Coins"]
         ],
         [
             ['text' => "Back"]
