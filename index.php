@@ -90,6 +90,9 @@ $payKey = json_encode([
         [
             ['text' => "Buy Stock Coins"], ['text' => "Transfer Coins"]
         ],
+	[
+            ['text' => "Wallet"], ['text' => "My Payments"]
+        ],
         [
             ['text' => "Back"]
         ]
