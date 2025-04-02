@@ -123,6 +123,29 @@ $gsKey = json_encode([
     ],
     "resize_keyboard" => true, 'one_time_keyboard' => true
 ]);
+
+$shKey = json_encode([
+    'keyboard' => [
+        [
+            ['text' => "CHANGE DETAILS"], ['text' => "CHANGE PRICE"]
+        ],
+        [
+            ['text' => "Add a Shared Account"], ['text' => "Add an Account"]
+        ],
+        [
+            ['text' => "Delete a Shared Account"], ['text' => "Delete an Account"]
+        ],
+        [
+            ['text' => "Check a Shared Account"]
+        ],
+        [
+            ['text' => "Back"]
+        ]
+    ],
+    "resize_keyboard" => true, 'one_time_keyboard' => true
+]);
+
+
 $buysKey = json_encode([
     'keyboard' => [
         [
