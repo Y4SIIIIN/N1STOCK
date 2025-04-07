@@ -145,6 +145,25 @@ $shKey = json_encode([
     "resize_keyboard" => true, 'one_time_keyboard' => true
 ]);
 
+$psubKey = json_encode([
+    'keyboard' => [
+        [
+            ['text' => '1 Month | ('.PREMIUM_PRICE["1"].') Stock Coins']
+        ],
+        [
+            ['text' => '3 Months | ('.PREMIUM_PRICE["3"].') Stock Coins']
+        ],
+        [
+            ['text' => '6 Months | ('.PREMIUM_PRICE["6"].') Stock Coins']
+        ],
+        [
+            ['text' => "Back"]
+        ]
+    ],
+    "resize_keyboard" => true, 'one_time_keyboard' => true
+]);
+
+
 
 $buysKey = json_encode([
     'keyboard' => [
