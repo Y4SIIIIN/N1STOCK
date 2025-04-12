@@ -176,6 +176,32 @@ $buysKey = json_encode([
     ],
     "resize_keyboard" => true, 'one_time_keyboard' => true
 ]);
+//Admin Panel
+$adminKey = json_encode([
+    'keyboard' => [
+        [
+            ['text' => "Settings"]
+        ],
+        [
+            ['text' => "Create an Account"], ['text' => "Create Discount Code"]
+        ],
+        [
+            ['text' => "Add Things"], ['text' => 'Delete Things'], ['text' => 'Shared Accounts Things']
+        ],
+        [
+            ['text' => "Block/Unblock a User"], ['text' => "Promote/Demote a User"]
+        ],
+        [
+            ['text' => "Check a Payment"], ['text' => "Check a User"], ['text' => "Set Users' Balance"], ['text' => "Send Message to All"]
+        ],
+        [
+            ['text' => "Back"]
+        ]
+    ],
+    "resize_keyboard" => true, 'one_time_keyboard' => true
+]);
+
+
 if(!isFind(strtolower($text), '/start ')) {
     createUser($from_id);
 }
