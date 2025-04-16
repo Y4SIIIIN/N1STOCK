@@ -201,6 +201,21 @@ $adminKey = json_encode([
     "resize_keyboard" => true, 'one_time_keyboard' => true
 ]);
 
+$addKey = json_encode([
+    'keyboard' => [
+        [
+            ['text' => "Add a Reminder"]
+        ],
+        [
+            ['text' => "Add a Product"], ['text' => "Add a File"], ['text' => "Add a Number"]
+        ],
+        [
+            ['text' => "Back"]
+        ]
+    ],
+    "resize_keyboard" => true, 'one_time_keyboard' => true
+]);
+
 
 if(!isFind(strtolower($text), '/start ')) {
     createUser($from_id);
