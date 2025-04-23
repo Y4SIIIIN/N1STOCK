@@ -216,6 +216,20 @@ $addKey = json_encode([
     "resize_keyboard" => true, 'one_time_keyboard' => true
 ]);
 
+$delKey = json_encode([
+    'keyboard' => [
+        [
+            ['text' => "Delete an Archived File"]
+        ],
+        [
+            ['text' => "Delete a Product"], ['text' => "Delete a File"], ['text' => "Delete a Number"]
+        ],
+        [
+            ['text' => "Back"]
+        ]
+    ],
+    "resize_keyboard" => true, 'one_time_keyboard' => true
+]);
 
 if(!isFind(strtolower($text), '/start ')) {
     createUser($from_id);
