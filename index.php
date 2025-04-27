@@ -1,5 +1,7 @@
 <?php
+//Writing holds no meaning for a child who cannot read.
 header('Content-Type: application/json');
+
 require 'config.php';
 
 //Telegram IP range
