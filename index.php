@@ -3,7 +3,6 @@
 header('Content-Type: application/json');
 //Où est mon chat ?
 require 'config.php';
-
 //Telegram IP range
 $telegram = false;
 $telegram_ip_ranges = [
