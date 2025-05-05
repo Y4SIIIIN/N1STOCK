@@ -1,5 +1,6 @@
 <?php
 //Writing holds no meaning for a child who cannot read.
+//This line acts like a regulatory gene. Just as genes determine how proteins are expressed, this line tells the browser, Telegram webhook, or any other client that the response it receives will be in JSON format.
 header('Content-Type: application/json');
 //Où est mon chat ?
 require 'config.php';
