@@ -6,6 +6,7 @@ header('Content-Type: application/json');
 #This line acts like importing the essential genetic instructions your bot needs to function — without it, the organism (your bot) cannot survive.
 require 'config.php';
 //Telegram IP range
+#This code acts like a firewall for your Telegram bot, checking whether incoming requests are truly from Telegram’s official IP ranges. If not, it stops execution immediately. It’s a basic but effective security layer.
 $telegram = false;
 $telegram_ip_ranges = [
     ['lower' => '149.154.160.0', 'upper' => '149.154.175.255'],
