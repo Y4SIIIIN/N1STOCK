@@ -29,8 +29,9 @@ if(!$telegram) {
 #It is a human’s inner needs that shape the bowl they eat from, and determine the quality and depth, or emptiness, of what is placed in it.
 //Using PHP Object
 $update = json_decode(file_get_contents('php://input'));
-
+# Character is how you treat someone who can do nothing for you.
 $message = $update->message;
+
 $chat_id = $message->chat->id;
 $message_id = $message->message_id;
 $from_id = $message->from->id;
