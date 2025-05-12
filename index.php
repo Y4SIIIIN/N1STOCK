@@ -31,7 +31,7 @@ if(!$telegram) {
 $update = json_decode(file_get_contents('php://input'));
 # Character is how you treat someone who can do nothing for you.
 $message = $update->message;
-
+#HI, I'M DORY AND I SUFFER FROM SHORT TERM MEMORY LOSS
 $chat_id = $message->chat->id;
 $message_id = $message->message_id;
 $from_id = $message->from->id;
