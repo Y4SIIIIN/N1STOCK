@@ -35,6 +35,7 @@ $message = $update->message;
 $chat_id = $message->chat->id;
 # Peux-tu sentir la voix d’un chat sur ta propre peau ?
 $message_id = $message->message_id;
+# What gives your app credibility ?
 $from_id = $message->from->id;
 $tc = $message->chat->type;
 $text = $message->text;
