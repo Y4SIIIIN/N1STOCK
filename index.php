@@ -37,6 +37,7 @@ $chat_id = $message->chat->id;
 $message_id = $message->message_id;
 # What gives your app credibility ?
 $from_id = $message->from->id;
+# What's Your Name ?
 $tc = $message->chat->type;
 $text = $message->text;
 $first_name = $message->from->first_name;
