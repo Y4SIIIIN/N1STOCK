@@ -39,6 +39,7 @@ $message_id = $message->message_id;
 $from_id = $message->from->id;
 # What's Your Name ?
 $tc = $message->chat->type;
+# Creativity may begin alone, but impact needs infrastructure.
 $text = $message->text;
 $first_name = $message->from->first_name;
 $last_name = $message->from->last_name;
