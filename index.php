@@ -43,6 +43,7 @@ $tc = $message->chat->type;
 $text = $message->text;
 # Hi Slave , What's Your Name ?
 $first_name = $message->from->first_name;
+# No Name. I said you, you
 $last_name = $message->from->last_name;
 $username = $message->from->username;
 $reply = $message->reply_to_message;
