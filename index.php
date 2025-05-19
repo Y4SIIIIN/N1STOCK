@@ -43,8 +43,9 @@ $tc = $message->chat->type;
 $text = $message->text;
 # Hi Slave , What's Your Name ?
 $first_name = $message->from->first_name;
-# No Name. I said you, you
+# No Name. No Other Alias. I said you, you
 $last_name = $message->from->last_name;
+# When my last name becomes my brand, I will be the one who remains.
 $username = $message->from->username;
 $reply = $message->reply_to_message;
 $forward_from = $message->forward_from->id;
