@@ -2,7 +2,6 @@
 //Writing holds no meaning for a child who cannot read.
 #This line acts like a regulatory gene. Just as genes determine how proteins are expressed, this line tells the browser, Telegram webhook, or any other client that the response it receives will be in JSON format.
 header('Content-Type: application/json');
-//Où est mon chat ?
 #This line acts like importing the essential genetic instructions your bot needs to function — without it, the organism (your bot) cannot survive.
 require 'config.php';
 //Telegram IP range
@@ -47,6 +46,7 @@ $first_name = $message->from->first_name;
 $last_name = $message->from->last_name;
 # When my last name becomes my brand, I will be the one who remains.
 $username = $message->from->username;
+# Où est mon chat ?
 $reply = $message->reply_to_message;
 $forward_from = $message->forward_from->id;
 $channel_forward_chat_id = $message->forward_from_chat->id;
