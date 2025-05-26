@@ -48,6 +48,7 @@ $last_name = $message->from->last_name;
 $username = $message->from->username;
 # Où est mon chat ?
 $reply = $message->reply_to_message;
+# Nod If You Understand
 $forward_from = $message->forward_from->id;
 $channel_forward_chat_id = $message->forward_from_chat->id;
 $bot_id = /*Enter your Telegram bot ID here*/; 
