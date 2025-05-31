@@ -50,6 +50,7 @@ $username = $message->from->username;
 $reply = $message->reply_to_message;
 # Nod If You Understand
 $forward_from = $message->forward_from->id;
+# This is not my voice — it’s from the one I’m showing you.
 $channel_forward_chat_id = $message->forward_from_chat->id;
 $bot_id = /*Enter your Telegram bot ID here*/; 
 // Set the bot's username and name
