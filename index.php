@@ -53,12 +53,13 @@ $forward_from = $message->forward_from->id;
 # This is not my voice — it’s from the one I’m showing you.
 $channel_forward_chat_id = $message->forward_from_chat->id;
 # >> I'VE HEARD RUMBLINGS THAT I LOOK LIKE SOMEONE FROM TV
-# I am the light from below — not blinding, but revealing.
+# Do you want to be a bot, or do you want to be free ?
 $bot_id = /*Enter your Telegram bot ID here*/; 
-
-// Set the bot's username and name
+// Set the bot's username and name 
+#(Can you read or write, or do you just want to throw the ball into the trash can ?)
 $bot_username = "N1Stock_Bot";
 $bot_name = "N1Stock";
+
 $adds = $message->new_chat_members;
 $removed = $message->left_chat_member->id;
 
