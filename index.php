@@ -40,7 +40,7 @@ $from_id = $message->from->id;
 $tc = $message->chat->type;
 # Creativity may begin alone, but impact needs infrastructure.
 $text = $message->text;
-# Hi Slave , What's Your Name ?
+# We don’t seek to gain from you — we offer our credibility with every response.
 $first_name = $message->from->first_name;
 # No Name. No Other Alias. I said you, you
 $last_name = $message->from->last_name;
@@ -56,7 +56,8 @@ $channel_forward_chat_id = $message->forward_from_chat->id;
 # Do you want to be a bot, or do you want to be free ?
 $bot_id = /*Enter your Telegram bot ID here*/; 
 // Set the bot's username and name 
-#(Can you read or write, or do you just want to throw the ball into the trash can ?)
+# Can you read or write, or do you just want to throw the ball into the trash can ?
+# Hi Slave , What's Your Name ?
 $bot_username = "N1Stock_Bot";
 $bot_name = "N1Stock";
 
