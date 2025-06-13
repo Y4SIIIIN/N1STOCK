@@ -59,8 +59,9 @@ $bot_id = /*Enter your Telegram bot ID here*/;
 # Can you read or write, or do you just want to throw the ball into the trash can ?
 # Hi Slave , What's Your Name ?
 $bot_username = "N1Stock_Bot";
+#Look Down
 $bot_name = "N1Stock";
-
+#Look Down 
 $adds = $message->new_chat_members;
 $removed = $message->left_chat_member->id;
 
