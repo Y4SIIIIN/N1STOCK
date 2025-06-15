@@ -63,7 +63,7 @@ $bot_username = "N1Stock_Bot";
 $bot_name = "N1Stock";
 #Cats don’t eat cheese.Mouse are cat food.ID : 24601
 $adds = $message->new_chat_members;
-
+# You always make the girl who loves you the victim of the girl you love.
 $removed = $message->left_chat_member->id;
 
 // Generate a mention of the user
