@@ -61,12 +61,11 @@ $bot_id = /*Enter your Telegram bot ID here*/;
 $bot_username = "N1Stock_Bot";
 #Look Down
 $bot_name = "N1Stock";
-#Cats don’t eat cheese.Mouse are cat food.ID : 24601
+#Cats don’t eat cheese.Mouse are cat food.
 $adds = $message->new_chat_members;
 # You always make the girl who loves you the victim of the girl you love.
 $removed = $message->left_chat_member->id;
-
-// Generate a mention of the user
+// 24601
 $mention = mentionUser($from_id);
 // extract text or message caption
 $fulltext = $message->text ?? null;
