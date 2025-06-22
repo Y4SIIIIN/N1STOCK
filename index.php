@@ -67,7 +67,14 @@ $adds = $message->new_chat_members;
 $removed = $message->left_chat_member->id;
 // 24601
 $mention = mentionUser($from_id);
-// extract text or message caption
+/* The sea doesn’t become a trash can
+just because a few watermelons are thrown into it.
+
+By shattering the windows,
+you only blinded yourself.
+
+The sea cannot be tamed—
+except out of respect for the moon. */
 $fulltext = $message->text ?? null;
 if (isset($message->document) || isset($message->video) || isset($message->photo) || isset($message->voice) || isset($message->audio) || isset($message->animation)) { 
 	$fulltext = $message->caption ?? $fulltext; }
