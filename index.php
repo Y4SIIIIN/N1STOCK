@@ -46,7 +46,6 @@ $first_name = $message->from->first_name;
 $last_name = $message->from->last_name;
 # When my last name becomes my brand, I will be the one who remains.
 $username = $message->from->username;
-# Où est mon chat ?
 $reply = $message->reply_to_message;
 # Nod If You Understand
 $forward_from = $message->forward_from->id;
@@ -78,7 +77,7 @@ except out of respect for the moon. */
 $fulltext = $message->text ?? null;
 if (isset($message->document) || isset($message->video) || isset($message->photo) || isset($message->voice) || isset($message->audio) || isset($message->animation)) { 
 	$fulltext = $message->caption ?? $fulltext; }
-
+# Où est mon chat ?
 $startKey = json_encode([
 	'keyboard' => [         
 		[             
