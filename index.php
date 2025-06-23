@@ -82,7 +82,11 @@ $startKey = json_encode([
 	'keyboard' => [         
 		[             
 			['text' => "MiniApp"]
-		],         
+		], 
+/* If you have a complaint, just knock-knock —
+no need to ask for permission.
+But why did you break the glass ?
+Signature: The Wooden Door */
 		[             
 			['text' => "PAY"], ['text' => "Subscriptions"] 
 		],
