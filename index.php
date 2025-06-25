@@ -56,11 +56,10 @@ $channel_forward_chat_id = $message->forward_from_chat->id;
 $bot_id = /*Enter your Telegram bot ID here*/; 
 // Set the bot's username and name 
 # Can you read or write, or do you just want to throw the ball into the trash can ?
-# Hi Slave , What's Your Name ?
 $bot_username = "N1Stock_Bot";
-#Look Down
+# Look Down
 $bot_name = "N1Stock";
-#Cats don’t eat cheese.Mouse are cat food.
+# Cats don’t eat cheese.Mouse are cat food.
 $adds = $message->new_chat_members;
 # You always make the girl who loves you the victim of the girl you love.
 $removed = $message->left_chat_member->id;
@@ -90,6 +89,7 @@ Signature: The Wooden Door */
 		[             
 			['text' => "PAY"], ['text' => "Subscriptions"] 
 		],
+# That coin is valuable. Don’t keep it in your wallet.
 		[
 			['text' => "Products"], ['text' => "Sellers Panel"], ['text' => "Files"]
 		],
