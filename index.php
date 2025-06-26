@@ -57,7 +57,6 @@ $bot_id = /*Enter your Telegram bot ID here*/;
 // Set the bot's username and name 
 # Can you read or write, or do you just want to throw the ball into the trash can ?
 $bot_username = "N1Stock_Bot";
-# Look Down
 $bot_name = "N1Stock";
 # Cats don’t eat cheese.Mouse are cat food.
 $adds = $message->new_chat_members;
@@ -93,6 +92,7 @@ Signature: The Wooden Door */
 		[
 			['text' => "Products"], ['text' => "Sellers Panel"], ['text' => "Files"]
 		],
+# What is it that your user doesn't know ?
 	        [
            		['text' => "Invite People"], ['text' => "HELP"], ['text' => "Contact"]
         	],
