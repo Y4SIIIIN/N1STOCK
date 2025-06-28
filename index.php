@@ -100,6 +100,7 @@ Signature: The Wooden Door */
 		[
             		['text' => "API Access"]
         	]
+# You need my servers to provide services to your users on your website or application.
 			],     
 		"resize_keyboard" => true,	"one_time_keyboard" => false,	"input_field_placeholder" => "Please click ↓" 
 		]);
