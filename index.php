@@ -104,6 +104,18 @@ Signature: The Wooden Door */
 			],     
 		"resize_keyboard" => true,	"one_time_keyboard" => false,	"input_field_placeholder" => "Please click ↓" 
 		]);
+# Face Value 
+$hostKey = json_encode([
+    'keyboard' => [
+        [
+            ['text' => "BUY NEW HOST"], ['text' => "My Hosts"]
+        ],
+        [
+            ['text' => "Back"]
+        ]
+    ],
+    "resize_keyboard" => true, 'one_time_keyboard' => true
+]);
 
 $sbsKey = json_encode([
     'keyboard' => [
