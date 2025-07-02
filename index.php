@@ -104,7 +104,6 @@ Signature: The Wooden Door */
 			],     
 		"resize_keyboard" => true,	"one_time_keyboard" => false,	"input_field_placeholder" => "Please click ↓" 
 		]);
-# Face Value 
 $hostKey = json_encode([
     'keyboard' => [
         [
@@ -116,7 +115,12 @@ $hostKey = json_encode([
     ],
     "resize_keyboard" => true, 'one_time_keyboard' => true
 ]);
-
+/* 
+Can you read or write, or do you just want to throw the ball into the trash can ?
+Cats don’t eat cheese , Mouse are cat food.
+I took the cars out .
+Just OS 
+*/
 $sbsKey = json_encode([
     'keyboard' => [
         [
