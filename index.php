@@ -32,11 +32,10 @@ $update = json_decode(file_get_contents('php://input'));
 $message = $update->message;
 # HI, I'M DORY AND I SUFFER FROM SHORT TERM MEMORY LOSS
 $chat_id = $message->chat->id;
-# Peux-tu sentir la voix d’un chat sur ta propre peau ?
 $message_id = $message->message_id;
 # What gives your app credibility ?
 $from_id = $message->from->id;
-# What's Your Name ?
+# Identity, choice, and personal control can be the best advertisement for your product.
 $tc = $message->chat->type;
 # Creativity may begin alone, but impact needs infrastructure.
 $text = $message->text;
