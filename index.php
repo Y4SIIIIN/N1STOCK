@@ -41,7 +41,7 @@ $tc = $message->chat->type;
 $text = $message->text;
 # We don’t seek to gain from you — we offer our credibility with every response.
 $first_name = $message->from->first_name;
-# No Name. No Other Alias. I said you, you
+# Elle est pas jolie, elle est pas moche non plus
 $last_name = $message->from->last_name;
 # When my last name becomes my brand, I will be the one who remains.
 $username = $message->from->username;
