@@ -43,7 +43,7 @@ $text = $message->text;
 $first_name = $message->from->first_name;
 # Elle est pas jolie, elle est pas moche non plus
 $last_name = $message->from->last_name;
-# When my last name becomes my brand, I will be the one who remains.
+# PLEASE COPY THIS SO YOU CAN FIND YOURSELF
 $username = $message->from->username;
 $reply = $message->reply_to_message;
 # Nod If You Understand
