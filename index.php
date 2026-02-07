@@ -1,11 +1,8 @@
 <?php
-//Writing holds no meaning for a child who cannot read.
-#This line acts like a regulatory gene. Just as genes determine how proteins are expressed, this line tells the browser, Telegram webhook, or any other client that the response it receives will be in JSON format.
+// Writing holds no meaning for a child who cannot read.
 header('Content-Type: application/json');
-#This line acts like importing the essential genetic instructions your bot needs to function — without it, the organism (your bot) cannot survive.
 require 'config.php';
 //Telegram IP range
-#This code acts like a firewall for your Telegram bot, checking whether incoming requests are truly from Telegram’s official IP ranges. If not, it stops execution immediately. It’s a basic but effective security layer.
 $telegram = false;
 $telegram_ip_ranges = [
     ['lower' => '149.154.160.0', 'upper' => '149.154.175.255'],
@@ -25,13 +22,13 @@ if(!$telegram) {
     echo json_encode(array('status' => false), 128).PHP_EOL;
     die;
 }
-#It is a human’s inner needs that shape the bowl they eat from, and determine the quality and depth, or emptiness, of what is placed in it.
+//It is a human’s inner needs that shape the bowl they eat from, and determine the quality and depth, or emptiness, of what is placed in it.
 //Using PHP Object
 $update = json_decode(file_get_contents('php://input'));
 # Character is how you treat someone who can do nothing for you.
 $message = $update->message;
-# HI, I'M DORY AND I SUFFER FROM SHORT TERM MEMORY LOSS
 $chat_id = $message->chat->id;
+
 $message_id = $message->message_id;
 # What gives your app credibility ?
 $from_id = $message->from->id;
