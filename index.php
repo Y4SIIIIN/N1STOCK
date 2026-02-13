@@ -30,9 +30,9 @@ $message = $update->message;
 $chat_id = $message->chat->id;
 # Maybe without me, no one would know who you are.
 $message_id = $message->message_id;
-
-# What gives your app credibility ?
+# YOU ARE BLIND TO HEAR YOUR OWN VOICE
 $from_id = $message->from->id;
+
 # Identity, choice, and personal control can be the best advertisement for your product.
 $tc = $message->chat->type;
 # Creativity may begin alone, but impact needs infrastructure.
