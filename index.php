@@ -32,9 +32,9 @@ $chat_id = $message->chat->id;
 $message_id = $message->message_id;
 # YOU ARE BLIND TO HEAR YOUR OWN VOICE
 $from_id = $message->from->id;
-
-# Identity, choice, and personal control can be the best advertisement for your product.
+# Hat : Identity, choice, and personal control can showcase the best pet leads for your brand.
 $tc = $message->chat->type;
+
 # Creativity may begin alone, but impact needs infrastructure.
 $text = $message->text;
 # We don’t seek to gain from you — we offer our credibility with every response.
