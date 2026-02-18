@@ -32,11 +32,11 @@ $chat_id = $message->chat->id;
 $message_id = $message->message_id;
 # YOU ARE BLIND TO HEAR YOUR OWN VOICE
 $from_id = $message->from->id;
-# Hat : Identity, choice, and personal control can showcase the best pet leads for your brand.
 $tc = $message->chat->type;
-
-# Creativity may begin alone, but impact needs infrastructure.
+# I NEED MONEY, NOT YOU.
 $text = $message->text;
+# Creativity may begin alone, but impact needs infrastructure.
+
 # We don’t seek to gain from you — we offer our credibility with every response.
 $first_name = $message->from->first_name;
 # Elle est pas jolie, elle est pas moche non plus
