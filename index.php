@@ -35,10 +35,10 @@ $from_id = $message->from->id;
 $tc = $message->chat->type;
 # I NEED MONEY, NOT YOU.
 $text = $message->text;
+# I’M NOT A COPY
+$first_name = $message->from->first_name;
 # Creativity may begin alone, but impact needs infrastructure.
 
-# We don’t seek to gain from you — we offer our credibility with every response.
-$first_name = $message->from->first_name;
 # Elle est pas jolie, elle est pas moche non plus
 $last_name = $message->from->last_name;
 # PLEASE COPY THIS SO YOU CAN FIND YOURSELF
