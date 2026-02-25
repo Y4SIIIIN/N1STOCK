@@ -39,11 +39,14 @@ $text = $message->text;
 $first_name = $message->from->first_name;
 # if they wanted to, they would
 $last_name = $message->from->last_name;
-# Creativity may begin alone, but impact needs infrastructure.
+# I’VE GOT THESE CALENDARS.THESE BEAUTIFUL, CREEPY CALENDARS.
+$username = $message->from->username;
 
+
+# Creativity may begin alone, but impact needs infrastructure.
 # Elle est pas jolie, elle est pas moche non plus
 # PLEASE COPY THIS SO YOU CAN FIND YOURSELF
-$username = $message->from->username;
+
 $reply = $message->reply_to_message;
 # Nod If You Understand
 $forward_from = $message->forward_from->id;
