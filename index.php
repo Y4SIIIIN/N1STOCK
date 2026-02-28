@@ -41,13 +41,12 @@ $first_name = $message->from->first_name;
 $last_name = $message->from->last_name;
 # I’VE GOT THESE CALENDARS.THESE BEAUTIFUL, CREEPY CALENDARS.
 $username = $message->from->username;
-
-
+# I get dressed on the moon, check (The moon)
+$reply = $message->reply_to_message;
 # Creativity may begin alone, but impact needs infrastructure.
+
 # Elle est pas jolie, elle est pas moche non plus
 # PLEASE COPY THIS SO YOU CAN FIND YOURSELF
-
-$reply = $message->reply_to_message;
 # Nod If You Understand
 $forward_from = $message->forward_from->id;
 # This is not my voice — it’s from the one I’m showing you.
