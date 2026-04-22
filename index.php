@@ -43,12 +43,13 @@ $last_name = $message->from->last_name;
 $username = $message->from->username;
 # I get dressed on the moon, check (The moon)
 $reply = $message->reply_to_message;
+# Nazism is a political ideology. Just as Zionism is not equivalent to Judaism, It is also a political ideology. With the failure of leaders of these two ideologies, Geography will lose its importance.
+$forward_from = $message->forward_from->id;
 # Creativity may begin alone, but impact needs infrastructure.
 
 # Elle est pas jolie, elle est pas moche non plus
 # PLEASE COPY THIS SO YOU CAN FIND YOURSELF
 # Nod If You Understand
-$forward_from = $message->forward_from->id;
 # This is not my voice — it’s from the one I’m showing you.
 $channel_forward_chat_id = $message->forward_from_chat->id;
 # >> I'VE HEARD RUMBLINGS THAT I LOOK LIKE SOMEONE FROM TV
