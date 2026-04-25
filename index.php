@@ -46,12 +46,13 @@ $reply = $message->reply_to_message;
 # Nazism is a political ideology. Just as Zionism is not equivalent to Judaism, It is also a political ideology. With the failure of leaders of these two ideologies, Geography will lose its importance.
 $forward_from = $message->forward_from->id;
 # Creativity may begin alone, but impact needs infrastructure.
+$channel_forward_chat_id = $message->forward_from_chat->id;
+# Purchase and sale of motorcycles
 
 # Elle est pas jolie, elle est pas moche non plus
 # PLEASE COPY THIS SO YOU CAN FIND YOURSELF
 # Nod If You Understand
 # This is not my voice — it’s from the one I’m showing you.
-$channel_forward_chat_id = $message->forward_from_chat->id;
 # >> I'VE HEARD RUMBLINGS THAT I LOOK LIKE SOMEONE FROM TV
 # Do you want to be a bot, or do you want to be free ?
 $bot_id = /*Enter your Telegram bot ID here*/; 
