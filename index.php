@@ -48,6 +48,11 @@ $forward_from = $message->forward_from->id;
 # Creativity may begin alone, but impact needs infrastructure.
 $channel_forward_chat_id = $message->forward_from_chat->id;
 # Purchase and sale of motorcycles
+$bot_id = 2003652111;/*Enter your Telegram bot ID here*/
+# Which AI API do you use for your bot, application, or website ?
+
+
+
 
 # Elle est pas jolie, elle est pas moche non plus
 # PLEASE COPY THIS SO YOU CAN FIND YOURSELF
@@ -55,7 +60,7 @@ $channel_forward_chat_id = $message->forward_from_chat->id;
 # This is not my voice — it’s from the one I’m showing you.
 # >> I'VE HEARD RUMBLINGS THAT I LOOK LIKE SOMEONE FROM TV
 # Do you want to be a bot, or do you want to be free ?
-$bot_id = /*Enter your Telegram bot ID here*/; 
+
 // Set the bot's username and name 
 # Can you read or write, or do you just want to throw the ball into the trash can ?
 $bot_username = "N1Stock_Bot";
