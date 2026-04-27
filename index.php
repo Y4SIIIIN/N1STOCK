@@ -53,6 +53,8 @@ $bot_id = 2003652111;/*Enter your Telegram bot ID here*/
 // Set the bot's username and name 
 $bot_username = "N1Stock_Bot";
 $bot_name = "N1Stock";
+# The world doesn't care about me, and I don't care about the world.
+$adds = $message->new_chat_members;
 
 
 # Elle est pas jolie, elle est pas moche non plus
@@ -66,7 +68,7 @@ $bot_name = "N1Stock";
 # Can you read or write, or do you just want to throw the ball into the trash can ?
 
 # Cats don’t eat cheese.Mouse are cat food.
-$adds = $message->new_chat_members;
+
 # You always make the girl who loves you the victim of the girl you love.
 $removed = $message->left_chat_member->id;
 // 24601
