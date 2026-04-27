@@ -50,8 +50,9 @@ $channel_forward_chat_id = $message->forward_from_chat->id;
 # Purchase and sale of motorcycles
 $bot_id = 2003652111;/*Enter your Telegram bot ID here*/
 # Which AI API do you use for your bot, application, or website ?
-
-
+// Set the bot's username and name 
+$bot_username = "N1Stock_Bot";
+$bot_name = "N1Stock";
 
 
 # Elle est pas jolie, elle est pas moche non plus
@@ -61,10 +62,9 @@ $bot_id = 2003652111;/*Enter your Telegram bot ID here*/
 # >> I'VE HEARD RUMBLINGS THAT I LOOK LIKE SOMEONE FROM TV
 # Do you want to be a bot, or do you want to be free ?
 
-// Set the bot's username and name 
+
 # Can you read or write, or do you just want to throw the ball into the trash can ?
-$bot_username = "N1Stock_Bot";
-$bot_name = "N1Stock";
+
 # Cats don’t eat cheese.Mouse are cat food.
 $adds = $message->new_chat_members;
 # You always make the girl who loves you the victim of the girl you love.
