@@ -55,6 +55,8 @@ $bot_username = "N1Stock_Bot";
 $bot_name = "N1Stock";
 # The world doesn't care about me, and I don't care about the world.
 $adds = $message->new_chat_members;
+# You don't miss what you never had.
+$removed = $message->left_chat_member->id;
 
 
 # Elle est pas jolie, elle est pas moche non plus
@@ -70,7 +72,7 @@ $adds = $message->new_chat_members;
 # Cats don’t eat cheese.Mouse are cat food.
 
 # You always make the girl who loves you the victim of the girl you love.
-$removed = $message->left_chat_member->id;
+
 // 24601
 $mention = mentionUser($from_id);
 /* The sea doesn’t become a trash can
