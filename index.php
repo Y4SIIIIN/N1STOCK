@@ -57,24 +57,20 @@ $bot_name = "N1Stock";
 $adds = $message->new_chat_members;
 # You don't miss what you never had.
 $removed = $message->left_chat_member->id;
-
+$mention = mentionUser($from_id);
 
 # Elle est pas jolie, elle est pas moche non plus
 # PLEASE COPY THIS SO YOU CAN FIND YOURSELF
 # Nod If You Understand
-# This is not my voice — it’s from the one I’m showing you.
 # >> I'VE HEARD RUMBLINGS THAT I LOOK LIKE SOMEONE FROM TV
 # Do you want to be a bot, or do you want to be free ?
 
 
 # Can you read or write, or do you just want to throw the ball into the trash can ?
 
-# Cats don’t eat cheese.Mouse are cat food.
-
 # You always make the girl who loves you the victim of the girl you love.
 
-// 24601
-$mention = mentionUser($from_id);
+
 /* The sea doesn’t become a trash can
 just because a few watermelons are thrown into it.
 
