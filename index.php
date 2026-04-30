@@ -62,6 +62,34 @@ $mention = mentionUser($from_id);
 $fulltext = $message->text ?? null;
 if (isset($message->document) || isset($message->video) || isset($message->photo) || isset($message->voice) || isset($message->audio) || isset($message->animation)) { 
 	$fulltext = $message->caption ?? $fulltext; }
+# Hamale Tala
+$startKey = json_encode([
+    'keyboard' => [
+        [
+            ['text' => "MiniApp"]
+        ],
+        [
+            ['text' => "PAY"], ['text' => "Subscriptions"]
+        ],
+        [
+            ['text' => "Products"], ['text' => "Sellers Panel"], ['text' => "Files"]
+        ],
+        [
+            ['text' => "Invite People"], ['text' => "HELP"], ['text' => "Contact"]
+        ],
+        [
+            ['text' => "API Access"]
+        ]
+    ],
+    //"resize_keyboard" => true, 'one_time_keyboard' => true
+    "resize_keyboard" => true,	"one_time_keyboard" => false,	"input_field_placeholder" => "Please click ↓" 
+]);
+# That coin is valuable. Don’t keep it in your wallet.
+
+
+
+
+
 
 # Elle est pas jolie, elle est pas moche non plus
 # PLEASE COPY THIS SO YOU CAN FIND YOURSELF
@@ -83,34 +111,13 @@ you only blinded yourself.
 The sea cannot be tamed—
 except out of respect for the moon. */
 # Où est mon chat ?
-$startKey = json_encode([
-	'keyboard' => [         
-		[             
-			['text' => "MiniApp"]
-		], 
 /* If you have a complaint, just knock-knock —
 no need to ask for permission.
 But why did you break the glass ?
 Signature: The Wooden Door */
-		[             
-			['text' => "PAY"], ['text' => "Subscriptions"] 
-		],
-# That coin is valuable. Don’t keep it in your wallet.
-		[
-			['text' => "Products"], ['text' => "Sellers Panel"], ['text' => "Files"]
-		],
 # What is it that your user doesn't know ?
-	        [
-           		['text' => "Invite People"], ['text' => "HELP"], ['text' => "Contact"]
-        	],
 # F1
-		[
-            		['text' => "API Access"]
-        	]
 # You need my servers to provide services to your users on your website or application.
-			],     
-		"resize_keyboard" => true,	"one_time_keyboard" => false,	"input_field_placeholder" => "Please click ↓" 
-		]);
 $hostKey = json_encode([
     'keyboard' => [
         [
