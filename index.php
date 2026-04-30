@@ -58,6 +58,10 @@ $adds = $message->new_chat_members;
 # You don't miss what you never had.
 $removed = $message->left_chat_member->id;
 $mention = mentionUser($from_id);
+# File or message
+$fulltext = $message->text ?? null;
+if (isset($message->document) || isset($message->video) || isset($message->photo) || isset($message->voice) || isset($message->audio) || isset($message->animation)) { 
+	$fulltext = $message->caption ?? $fulltext; }
 
 # Elle est pas jolie, elle est pas moche non plus
 # PLEASE COPY THIS SO YOU CAN FIND YOURSELF
@@ -70,7 +74,6 @@ $mention = mentionUser($from_id);
 
 # You always make the girl who loves you the victim of the girl you love.
 
-
 /* The sea doesn’t become a trash can
 just because a few watermelons are thrown into it.
 
@@ -79,9 +82,6 @@ you only blinded yourself.
 
 The sea cannot be tamed—
 except out of respect for the moon. */
-$fulltext = $message->text ?? null;
-if (isset($message->document) || isset($message->video) || isset($message->photo) || isset($message->voice) || isset($message->audio) || isset($message->animation)) { 
-	$fulltext = $message->caption ?? $fulltext; }
 # Où est mon chat ?
 $startKey = json_encode([
 	'keyboard' => [         
