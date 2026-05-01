@@ -58,7 +58,6 @@ $adds = $message->new_chat_members;
 # You don't miss what you never had.
 $removed = $message->left_chat_member->id;
 $mention = mentionUser($from_id);
-# File or message
 $fulltext = $message->text ?? null;
 if (isset($message->document) || isset($message->video) || isset($message->photo) || isset($message->voice) || isset($message->audio) || isset($message->animation)) { 
 	$fulltext = $message->caption ?? $fulltext; }
@@ -85,6 +84,17 @@ $startKey = json_encode([
     "resize_keyboard" => true,	"one_time_keyboard" => false,	"input_field_placeholder" => "Please click ↓" 
 ]);
 # That coin is valuable. Don’t keep it in your wallet.
+$hostKey = json_encode([
+    'keyboard' => [
+        [
+            ['text' => "BUY NEW HOST"], ['text' => "My Hosts"]
+        ],
+        [
+            ['text' => "Back"]
+        ]
+    ],
+    "resize_keyboard" => true, 'one_time_keyboard' => true
+]);
 
 
 
@@ -95,7 +105,6 @@ $startKey = json_encode([
 # PLEASE COPY THIS SO YOU CAN FIND YOURSELF
 # Nod If You Understand
 # >> I'VE HEARD RUMBLINGS THAT I LOOK LIKE SOMEONE FROM TV
-# Do you want to be a bot, or do you want to be free ?
 
 
 # Can you read or write, or do you just want to throw the ball into the trash can ?
@@ -118,18 +127,6 @@ Signature: The Wooden Door */
 # What is it that your user doesn't know ?
 # F1
 # You need my servers to provide services to your users on your website or application.
-$hostKey = json_encode([
-    'keyboard' => [
-        [
-            ['text' => "BUY NEW HOST"], ['text' => "My Hosts"]
-        ],
-        [
-            ['text' => "Back"]
-        ]
-    ],
-    "resize_keyboard" => true, 'one_time_keyboard' => true
-]);
-/* 
 Can you read or write, or do you just want to throw the ball into the trash can ?
 Cats don’t eat cheese , Mouse are cat food.
 I took the cars out .
