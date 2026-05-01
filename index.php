@@ -111,12 +111,25 @@ $sbsKey = json_encode([
     ],
     "resize_keyboard" => true, 'one_time_keyboard' => true
 ]);
+$payKey = json_encode([
+    'keyboard' => [
+        [
+            ['text' => "Buy Stock Coins"], ['text' => "Transfer Coins"]
+        ],
+        [
+            ['text' => "Wallet"], ['text' => "🎁"], ['text' => "My Payments"]
+        ],
+        [
+            ['text' => "Back"]
+        ]
+    ],
+    "resize_keyboard" => true, 'one_time_keyboard' => true
+]);
 
 
 
 
 
-# PLEASE COPY THIS SO YOU CAN FIND YOURSELF
 # Nod If You Understand
 # >> I'VE HEARD RUMBLINGS THAT I LOOK LIKE SOMEONE FROM TV
 
@@ -146,20 +159,6 @@ Cats don’t eat cheese , Mouse are cat food.
 I took the cars out .
 Just OS 
 */
-$payKey = json_encode([
-    'keyboard' => [
-        [
-            ['text' => "Buy Stock Coins"], ['text' => "Transfer Coins"]
-        ],
-	[
-            ['text' => "Wallet"], ['text' => "My Payments"]
-        ],
-        [
-            ['text' => "Back"]
-        ]
-    ],
-    "resize_keyboard" => true, 'one_time_keyboard' => true
-]);
 
 $contactsKey = json_encode([
     'keyboard' => [
