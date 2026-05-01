@@ -95,13 +95,27 @@ $hostKey = json_encode([
     ],
     "resize_keyboard" => true, 'one_time_keyboard' => true
 ]);
+$sbsKey = json_encode([
+    'keyboard' => [
+        [
+            ['text' => "PREMIUM"]
+        ],
+            ['text' => "Continental Hotel"], ['text' => "Shared Accounts"]
+        ],
+        [
+            ['text' => "Hosting Servers"]
+        ],
+        [
+            ['text' => "Back"]
+        ]
+    ],
+    "resize_keyboard" => true, 'one_time_keyboard' => true
+]);
 
 
 
 
 
-
-# Elle est pas jolie, elle est pas moche non plus
 # PLEASE COPY THIS SO YOU CAN FIND YOURSELF
 # Nod If You Understand
 # >> I'VE HEARD RUMBLINGS THAT I LOOK LIKE SOMEONE FROM TV
@@ -127,25 +141,11 @@ Signature: The Wooden Door */
 # What is it that your user doesn't know ?
 # F1
 # You need my servers to provide services to your users on your website or application.
-Can you read or write, or do you just want to throw the ball into the trash can ?
+/* Can you read or write, or do you just want to throw the ball into the trash can ?
 Cats don’t eat cheese , Mouse are cat food.
 I took the cars out .
 Just OS 
 */
-$sbsKey = json_encode([
-    'keyboard' => [
-        [
-            ['text' => "PREMIUM"]
-        ],
-        [
-            ['text' => "Continental Hotel"]
-        ],
-        [
-            ['text' => "Back"]
-        ]
-    ],
-    "resize_keyboard" => true, 'one_time_keyboard' => true
-]);
 $payKey = json_encode([
     'keyboard' => [
         [
