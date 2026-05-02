@@ -136,6 +136,17 @@ $hpKey = json_encode([
     ],
     "resize_keyboard" => true, 'one_time_keyboard' => true
 ]);
+$contactsKey = json_encode([
+    'keyboard' => [
+        [
+            ['text' => "Open a Ticket"], ['text' => "My Tickets"]
+        ],
+        [
+            ['text' => "Back"]
+        ]
+    ],
+    "resize_keyboard" => true, 'one_time_keyboard' => true
+]);
 
 
 
@@ -167,18 +178,6 @@ Cats don’t eat cheese , Mouse are cat food.
 I took the cars out .
 Just OS 
 */
-
-$contactsKey = json_encode([
-    'keyboard' => [
-        [
-            ['text' => "Open a Ticket"], ['text' => "My Tickets"]
-        ],
-        [
-            ['text' => "Back"]
-        ]
-    ],
-    "resize_keyboard" => true, 'one_time_keyboard' => true
-]);
 
 $gsKey = json_encode([
     'keyboard' => [
