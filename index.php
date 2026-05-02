@@ -125,12 +125,20 @@ $payKey = json_encode([
     ],
     "resize_keyboard" => true, 'one_time_keyboard' => true
 ]);
+$hpKey = json_encode([
+    'keyboard' => [
+        [
+            ['text' => '1GB - $'.HOST_MONTH['1'].'/mo']
+        ],
+        [
+            ['text' => "Back"]
+        ]
+    ],
+    "resize_keyboard" => true, 'one_time_keyboard' => true
+]);
 
 
 
-
-
-# Nod If You Understand
 # >> I'VE HEARD RUMBLINGS THAT I LOOK LIKE SOMEONE FROM TV
 
 
