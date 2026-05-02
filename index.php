@@ -147,10 +147,14 @@ $contactsKey = json_encode([
     ],
     "resize_keyboard" => true, 'one_time_keyboard' => true
 ]);
-
-
-
-# >> I'VE HEARD RUMBLINGS THAT I LOOK LIKE SOMEONE FROM TV
+$prizeKey = json_encode([
+    'keyboard' => [
+        [
+            ['text' => "Higher Lower Game"], ['text' => "Emoji Game"]
+        ]
+    ],
+    "resize_keyboard" => true, 'one_time_keyboard' => true
+]);
 
 
 # Can you read or write, or do you just want to throw the ball into the trash can ?
