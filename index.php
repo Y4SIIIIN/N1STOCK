@@ -240,12 +240,23 @@ $buysKey = json_encode([
     ],
     "resize_keyboard" => true, 'one_time_keyboard' => true
 ]);
+$numKey = json_encode([
+    'keyboard' => [
+        [
+            ['text' => "CHECK AGAIN"]
+        ],
+        [
+            ['text' => "Number is Banned"], ['text' => "Stop the Process"]
+        ],
+        [
+            ['text' => "Finish"], ['text' => "Back"]
+        ]
+    ],
+    "resize_keyboard" => true, 'one_time_keyboard' => true
+]);
 
 
-/* If you have a complaint, just knock-knock —
-no need to ask for permission.
-But why did you break the glass ?
-Signature: The Wooden Door */
+
 # What is it that your user doesn't know ?
 # F1
 # You need my servers to provide services to your users on your website or application.
