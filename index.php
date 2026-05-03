@@ -155,9 +155,19 @@ $prizeKey = json_encode([
     ],
     "resize_keyboard" => true, 'one_time_keyboard' => true
 ]);
+$gsKey = json_encode([
+    'keyboard' => [
+        [
+            ['text' => "BUY"], ['text' => "Status"]
+        ],
+        [
+            ['text' => "Back"]
+        ]
+    ],
+    "resize_keyboard" => true, 'one_time_keyboard' => true
+]);
 
 
-# Can you read or write, or do you just want to throw the ball into the trash can ?
 
 # You always make the girl who loves you the victim of the girl you love.
 
@@ -182,18 +192,6 @@ Cats don’t eat cheese , Mouse are cat food.
 I took the cars out .
 Just OS 
 */
-
-$gsKey = json_encode([
-    'keyboard' => [
-        [
-            ['text' => "BUY"], ['text' => "Status"]
-        ],
-        [
-            ['text' => "Back"]
-        ]
-    ],
-    "resize_keyboard" => true, 'one_time_keyboard' => true
-]);
 
 $shKey = json_encode([
     'keyboard' => [
