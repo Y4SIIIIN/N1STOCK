@@ -209,9 +209,39 @@ $subKey = json_encode([
     ],
     "resize_keyboard" => true, 'one_time_keyboard' => true
 ]);
+$psubKey = json_encode([
+    'keyboard' => [
+        [
+            ['text' => '1 Month | ('.PREMIUM_PRICE["1"].') Stock Coins']
+        ],
+        [
+            ['text' => '3 Months | ('.PREMIUM_PRICE["3"].') Stock Coins']
+        ],
+        [
+            ['text' => '6 Months | ('.PREMIUM_PRICE["6"].') Stock Coins']
+        ],
+        [
+            ['text' => "Back"]
+        ]
+    ],
+    "resize_keyboard" => true, 'one_time_keyboard' => true
+]);
+$buysKey = json_encode([
+    'keyboard' => [
+        [
+            ['text' => "Iranian Payment"], ['text' => "TON"], ['text' => "UPI"]
+        ],
+        [
+            ['text' => "Stripe"]
+        ],
+        [
+            ['text' => "Back"]
+        ]
+    ],
+    "resize_keyboard" => true, 'one_time_keyboard' => true
+]);
 
 
-# Où est mon chat ?
 /* If you have a complaint, just knock-knock —
 no need to ask for permission.
 But why did you break the glass ?
@@ -227,17 +257,6 @@ Just OS
 
 
 
-$buysKey = json_encode([
-    'keyboard' => [
-        [
-            ['text' => "TON"]
-        ],
-        [
-            ['text' => "Back"]
-        ]
-    ],
-    "resize_keyboard" => true, 'one_time_keyboard' => true
-]);
 //Admin Panel
 $adminKey = json_encode([
     'keyboard' => [
