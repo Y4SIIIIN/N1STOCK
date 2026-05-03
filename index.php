@@ -186,15 +186,31 @@ $shKey = json_encode([
     ],
     "resize_keyboard" => true, 'one_time_keyboard' => true
 ]);
+$subKey = json_encode([
+    'keyboard' => [
+        [
+            ['text' => "🚀 x2 Links Per Day"], ['text' => "💸 Free Groups' Subscription"]
+        ],
+        [
+            ['text' => '1 Day | Trial']
+        ],
+        [
+            ['text' => '1 Month | ('.getGSPrice('1').') Stock Coins']
+        ],
+        [
+            ['text' => '3 Months | ('.getGSPrice('3').') Stock Coins']
+        ],
+        [
+            ['text' => '6 Months | ('.getGSPrice('6').') Stock Coins']
+        ],
+        [
+            ['text' => "Back"]
+        ]
+    ],
+    "resize_keyboard" => true, 'one_time_keyboard' => true
+]);
 
-/* The sea doesn’t become a trash can
-just because a few watermelons are thrown into it.
 
-By shattering the windows,
-you only blinded yourself.
-
-The sea cannot be tamed—
-except out of respect for the moon. */
 # Où est mon chat ?
 /* If you have a complaint, just knock-knock —
 no need to ask for permission.
@@ -208,25 +224,6 @@ Cats don’t eat cheese , Mouse are cat food.
 I took the cars out .
 Just OS 
 */
-
-
-$psubKey = json_encode([
-    'keyboard' => [
-        [
-            ['text' => '1 Month | ('.PREMIUM_PRICE["1"].') Stock Coins']
-        ],
-        [
-            ['text' => '3 Months | ('.PREMIUM_PRICE["3"].') Stock Coins']
-        ],
-        [
-            ['text' => '6 Months | ('.PREMIUM_PRICE["6"].') Stock Coins']
-        ],
-        [
-            ['text' => "Back"]
-        ]
-    ],
-    "resize_keyboard" => true, 'one_time_keyboard' => true
-]);
 
 
 
