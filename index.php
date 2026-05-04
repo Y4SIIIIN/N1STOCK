@@ -336,6 +336,24 @@ $contactKey = json_encode([
     ],
     "resize_keyboard" => true, 'one_time_keyboard' => true
 ]);
+$prmKey = json_encode([
+    'keyboard'=>[
+        [
+            ['text' => "BUY"]
+        ],
+        [
+            ['text' => "Quests"], ['text' => "Status"], ['text' => "What is Premium?"]
+        ],
+        [
+            ['text' => "Back"]
+        ]
+    ],
+    "resize_keyboard" => true, 'one_time_keyboard' => true
+]);
+# Age Police 110 in HamsaYe'YE Lashi ro Jam nakone , Khodam Jamesh Mikonam , OK ?
+
+
+
 
 if(!isFind(strtolower($text), '/start ')) {
     createUser($from_id);
