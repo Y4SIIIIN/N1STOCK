@@ -308,9 +308,17 @@ $delKey = json_encode([
     "resize_keyboard" => true, 'one_time_keyboard' => true
 ]);
 # You need my servers to provide services to your users on your website or application.
+$backKey = json_encode([
+    'keyboard' => [
+        [
+            ['text' => "Back"]
+        ]
+    ],
+    "resize_keyboard" => true, 'one_time_keyboard' => true
+]);
+# Can you read or write, or do you just want to throw the ball into the trash can ?
 
-
-/* Can you read or write, or do you just want to throw the ball into the trash can ?
+/* 
 Cats don’t eat cheese , Mouse are cat food.
 I took the cars out .
 Just OS 
