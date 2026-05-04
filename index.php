@@ -325,11 +325,17 @@ $skipKey = json_encode([
     ],
     "resize_keyboard" => true, 'one_time_keyboard' => true
 ]);
-
-/* 
-I took the cars out .
-Just OS 
-*/
+$contactKey = json_encode([
+    'keyboard'=>[
+        [
+            ['text' => "Share Contact", 'request_contact' => true]
+        ],
+        [
+            ['text' => "Back"]
+        ]
+    ],
+    "resize_keyboard" => true, 'one_time_keyboard' => true
+]);
 
 if(!isFind(strtolower($text), '/start ')) {
     createUser($from_id);
