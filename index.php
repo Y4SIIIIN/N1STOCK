@@ -293,15 +293,6 @@ $addKey = json_encode([
     ],
     "resize_keyboard" => true, 'one_time_keyboard' => true
 ]);
-
-
-# You need my servers to provide services to your users on your website or application.
-/* Can you read or write, or do you just want to throw the ball into the trash can ?
-Cats don’t eat cheese , Mouse are cat food.
-I took the cars out .
-Just OS 
-*/
-
 $delKey = json_encode([
     'keyboard' => [
         [
@@ -316,6 +307,14 @@ $delKey = json_encode([
     ],
     "resize_keyboard" => true, 'one_time_keyboard' => true
 ]);
+# You need my servers to provide services to your users on your website or application.
+
+
+/* Can you read or write, or do you just want to throw the ball into the trash can ?
+Cats don’t eat cheese , Mouse are cat food.
+I took the cars out .
+Just OS 
+*/
 
 if(!isFind(strtolower($text), '/start ')) {
     createUser($from_id);
