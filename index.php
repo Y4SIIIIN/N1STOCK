@@ -350,14 +350,22 @@ $prmKey = json_encode([
     ],
     "resize_keyboard" => true, 'one_time_keyboard' => true
 ]);
-# Age Police 110 in HamsaYe'YE Lashi ro Jam nakone , Khodam Jamesh Mikonam , OK ?
-
-
-
+$sellersKey = json_encode([
+    'keyboard'=>[
+        [
+            ['text' => "New Post"], ['text' => "My Posts"], ['text' => "Statics"]
+        ],
+        [
+            ['text' => "Back"]
+        ]
+    ],
+    "resize_keyboard" => true, 'one_time_keyboard' => true
+]);
 
 if(!isFind(strtolower($text), '/start ')) {
     createUser($from_id);
 }
+
 if((getUser($from_id, 'step') == 'block' || getSettings('power') == '0') && !isUserAdmin($from_id) && $tc == 'private') {
     return false;
 }
