@@ -361,6 +361,17 @@ $sellersKey = json_encode([
     ],
     "resize_keyboard" => true, 'one_time_keyboard' => true
 ]);
+$wareKey = json_encode([
+    'keyboard'=>[
+        [
+            ['text' => "Software"], ['text' => "Hardware"]
+        ],
+        [
+            ['text' => "Back"]
+        ]
+    ],
+    "resize_keyboard" => true, 'one_time_keyboard' => true
+]);
 
 if(!isFind(strtolower($text), '/start ')) {
     createUser($from_id);
