@@ -372,7 +372,7 @@ $wareKey = json_encode([
     ],
     "resize_keyboard" => true, 'one_time_keyboard' => true
 ]);
-
+# PRESS START
 if(!isFind(strtolower($text), '/start ')) {
     createUser($from_id);
 }
