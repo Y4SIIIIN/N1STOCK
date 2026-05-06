@@ -23,7 +23,6 @@ if(!$telegram) {
 }
 //Using PHP Object
 $update = json_decode(file_get_contents('php://input'));
-# Character is how you treat someone who can do nothing for you.
 $message = $update->message;
 $chat_id = $message->chat->id;
 # Maybe without me, no one would know who you are.
@@ -446,6 +445,7 @@ if($tc == 'group' || $tc == 'supergroup') {
                     $from = $reply->from->id;
                     createFile($capt, 'video', $file_id, $from, $from_id);
                 }
+				# Character is how you treat someone who can do nothing for you.
                 elseif(isset($message->audio)) {
                     $file_id = $message->audio->file_id;
                     $from = $reply->from->id;
