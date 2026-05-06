@@ -27,7 +27,6 @@ $message = $update->message;
 $chat_id = $message->chat->id;
 # Maybe without me, no one would know who you are.
 $message_id = $message->message_id;
-# YOU ARE BLIND TO HEAR YOUR OWN VOICE
 $from_id = $message->from->id;
 $tc = $message->chat->type;
 # I NEED MONEY, NOT YOU.
@@ -451,6 +450,7 @@ if($tc == 'group' || $tc == 'supergroup') {
                     $from = $reply->from->id;
                     createFile($capt, 'audio', $file_id, $from, $from_id);
                 }
+				# YOU ARE BLIND TO HEAR YOUR OWN VOICE
             }
         }
     }
