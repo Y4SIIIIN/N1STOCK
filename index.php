@@ -454,7 +454,8 @@ if($tc == 'group' || $tc == 'supergroup') {
             }
         }
     }
-    else {
+	# shutterstock
+	else {
         if(isset($message->document)) {
             if(isUserAdmin($from_id) && getUserAdmin($from_id) > 1) {
                 $file_id = $message->document->file_id;
