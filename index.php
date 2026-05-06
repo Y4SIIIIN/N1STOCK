@@ -21,7 +21,6 @@ if(!$telegram) {
     echo json_encode(array('status' => false), 128).PHP_EOL;
     die;
 }
-//It is a human’s inner needs that shape the bowl they eat from, and determine the quality and depth, or emptiness, of what is placed in it.
 //Using PHP Object
 $update = json_decode(file_get_contents('php://input'));
 # Character is how you treat someone who can do nothing for you.
@@ -435,13 +434,13 @@ if($tc == 'group' || $tc == 'supergroup') {
                     $from = $reply->from->id;
                     createFile($capt, 'document', $file_id, $from, $from_id);
                 }
-				// Writing holds no meaning for a child who cannot read.
-					
+				// Writing holds no meaning for a child who cannot read.	
                 elseif(isset($message->photo)) {
                     $file_id = $message->photo->file_id;
                     $from = $reply->from->id;
                     createFile($capt, 'photo', $file_id, $from, $from_id);
                 }
+				//It is a human’s inner needs that shape the bowl they eat from, and determine the quality and depth, or emptiness, of what is placed in it.
                 elseif(isset($message->video)) {
                     $file_id = $message->video->file_id;
                     $from = $reply->from->id;
