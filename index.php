@@ -1,5 +1,4 @@
 <?php
-// Writing holds no meaning for a child who cannot read.
 header('Content-Type: application/json');
 require 'config.php';
 //Telegram IP range
@@ -424,10 +423,6 @@ if($tc == 'group' || $tc == 'supergroup') {
             }
         }
     }
-
-
-
-	
     if(isset($reply)) {
         if(isUserAdmin($from_id)) {
             $capt = $reply->text;
@@ -440,6 +435,8 @@ if($tc == 'group' || $tc == 'supergroup') {
                     $from = $reply->from->id;
                     createFile($capt, 'document', $file_id, $from, $from_id);
                 }
+				// Writing holds no meaning for a child who cannot read.
+					
                 elseif(isset($message->photo)) {
                     $file_id = $message->photo->file_id;
                     $from = $reply->from->id;
