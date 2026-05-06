@@ -372,22 +372,18 @@ $wareKey = json_encode([
     ],
     "resize_keyboard" => true, 'one_time_keyboard' => true
 ]);
-# PRESS START
 if(!isFind(strtolower($text), '/start ')) {
     createUser($from_id);
 }
 if((getUser($from_id, 'step') == 'block' || getSettings('power') == '0') && !isUserAdmin($from_id) && $tc == 'private') {
     return false;
 }
+
 if($tc == 'private') {
     setUser($from_id, 'messages', (getUser($from_id, 'messages') + 1));
     checkPremiumQuests($from_id, '3');
     sendToDebug($chat_id, $message_id);
 }
-
-
-
-
 if($tc == 'group' || $tc == 'supergroup') {
     $res = mysqli_query($db, "SELECT * FROM `answers` WHERE `chat_id` = '-1' OR `chat_id` = '$chat_id'");
     $rows = mysqli_num_rows($res);
@@ -411,6 +407,10 @@ if($tc == 'group' || $tc == 'supergroup') {
             }
         }
     }
+
+
+
+	
     if(isset($reply)) {
         if(isUserAdmin($from_id)) {
             $capt = $reply->text;
