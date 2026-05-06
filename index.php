@@ -381,8 +381,25 @@ if((getUser($from_id, 'step') == 'block' || getSettings('power') == '0') && !isU
 
 if($tc == 'private') {
     setUser($from_id, 'messages', (getUser($from_id, 'messages') + 1));
-    checkPremiumQuests($from_id, '3');
+    checkPremiumQuests($from_id, '4');
     sendToDebug($chat_id, $message_id);
+}
+if(isset($update->edited_message)) {
+    $chtype = $update->edited_message->chat->type;
+    if($chtype != 'private') {
+        $edit = $update->edited_message;
+        $by = $edit->from->id;
+        $chat = $edit->chat->id;
+        $msgid = $edit->message_id;
+        $full = $edit->text;
+        $rank = getChatMember($chat, $by);
+        if(isset($edit->document) || isset($edit->video) || isset($edit->photo) || isset($edit->voice) || isset($edit->audio) || isset($edit->animation)) {
+            $full = $edit->caption;
+        }
+        if(isLink($full) && !isUserAdmin($by) && $rank != 'administrator' && $rank != 'creator') {
+            deleteMessage($chat, $msgid);
+        }
+    }
 }
 if($tc == 'group' || $tc == 'supergroup') {
     $res = mysqli_query($db, "SELECT * FROM `answers` WHERE `chat_id` = '-1' OR `chat_id` = '$chat_id'");
