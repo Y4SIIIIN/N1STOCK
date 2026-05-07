@@ -494,8 +494,9 @@ if($tc == 'group' || $tc == 'supergroup') {
                             createFile($link, 'document', $file_id, $from_id, $from_id);
                         }
                     }
-                }		
-                elseif(isFind($name, 'vectorstock_')) {
+                }
+				# vectorstock
+				elseif(isFind($name, 'vectorstock_')) {
                     $id = (int) filter_var($name, FILTER_SANITIZE_NUMBER_INT);
                     if(isset($id) && !empty($id) && is_numeric($id)) {
                         $res = mysqli_query($db, "SELECT * FROM `files` WHERE `link` LIKE '%vectorstock.com%' AND `link` LIKE '%$id%'");
