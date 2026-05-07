@@ -543,7 +543,8 @@ if($tc == 'group' || $tc == 'supergroup') {
                         }
                     }
                 }
-                elseif(isFind($name, 'dreamstime_')) {
+				# dreamstime
+				elseif(isFind($name, 'dreamstime_')) {
                     $id = (int) filter_var($name, FILTER_SANITIZE_NUMBER_INT);
                     if(isset($id) && !empty($id) && is_numeric($id)) {
                         $res = mysqli_query($db, "SELECT * FROM `files` WHERE `link` LIKE '%dreamstime.com%' AND `link` LIKE '%$id%'");
@@ -554,6 +555,8 @@ if($tc == 'group' || $tc == 'supergroup') {
                         }
                     }
                 }
+
+					
                 elseif(isFind($name, 'Yellowimages_')) {
                     $id = (int) filter_var($name, FILTER_SANITIZE_NUMBER_INT);
                     if(isset($id) && !empty($id) && is_numeric($id)) {
