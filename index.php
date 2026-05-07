@@ -483,7 +483,8 @@ if($tc == 'group' || $tc == 'supergroup') {
                         }
                     }
                 }
-                elseif(isFind($name, 'Freepik_')) {
+				# Freepik
+				elseif(isFind($name, 'Freepik_')) {
                     $id = (int) filter_var($name, FILTER_SANITIZE_NUMBER_INT);
                     if(isset($id) && !empty($id) && is_numeric($id)) {
                         $res = mysqli_query($db, "SELECT * FROM `files` WHERE `link` LIKE '%freepik.com%' AND `link` LIKE '%$id%'");
@@ -493,7 +494,7 @@ if($tc == 'group' || $tc == 'supergroup') {
                             createFile($link, 'document', $file_id, $from_id, $from_id);
                         }
                     }
-                }
+                }		
                 elseif(isFind($name, 'vectorstock_')) {
                     $id = (int) filter_var($name, FILTER_SANITIZE_NUMBER_INT);
                     if(isset($id) && !empty($id) && is_numeric($id)) {
