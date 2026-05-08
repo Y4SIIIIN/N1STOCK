@@ -555,9 +555,8 @@ if($tc == 'group' || $tc == 'supergroup') {
                         }
                     }
                 }
-
-					
-                elseif(isFind($name, 'Yellowimages_')) {
+				# Yellowimages
+				elseif(isFind($name, 'Yellowimages_')) {
                     $id = (int) filter_var($name, FILTER_SANITIZE_NUMBER_INT);
                     if(isset($id) && !empty($id) && is_numeric($id)) {
                         $res = mysqli_query($db, "SELECT * FROM `files` WHERE `link` LIKE '%yellowimages.com%' AND `link` LIKE '%$id%'");
