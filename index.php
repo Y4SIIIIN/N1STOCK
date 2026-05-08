@@ -604,7 +604,6 @@ if($tc == 'group' || $tc == 'supergroup') {
             }
         }
     }
-	# Maybe without me, no one would know who you are.
     if(isLink($fulltext)) {
         $send = true;
         $linksinfo = getTodayLinks($from_id, $chat_id);
@@ -620,9 +619,10 @@ if($tc == 'group' || $tc == 'supergroup') {
         $double = 1;
         $credit = 1;
 		// Writing holds no meaning for a child who cannot read.
-        if(getUser($from_id, 'double') > '0') {
+		if(getUser($from_id, 'double') > '0') {
             $double = getUser($from_id, 'double');
         }
+		
         if(isCreditExist($domain)) {
             $credit = getCredit($domain, 'price');
         }
