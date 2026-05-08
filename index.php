@@ -25,7 +25,6 @@ if(!$telegram) {
 $update = json_decode(file_get_contents('php://input'));
 $message = $update->message;
 $chat_id = $message->chat->id;
-# Maybe without me, no one would know who you are.
 $message_id = $message->message_id;
 $from_id = $message->from->id;
 $tc = $message->chat->type;
@@ -606,6 +605,7 @@ if($tc == 'group' || $tc == 'supergroup') {
             }
         }
     }
+	# Maybe without me, no one would know who you are.
     if(isLink($fulltext)) {
         $send = true;
         $linksinfo = getTodayLinks($from_id, $chat_id);
