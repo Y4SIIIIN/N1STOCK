@@ -579,7 +579,8 @@ if($tc == 'group' || $tc == 'supergroup') {
                         }
                     }
                 }
-                elseif(isFind($name, 'iconscout_')) {
+				# iconscout :)
+				elseif(isFind($name, 'iconscout_')) {
                     $id = (int) filter_var($name, FILTER_SANITIZE_NUMBER_INT);
                     if(isset($id) && !empty($id) && is_numeric($id)) {
                         $res = mysqli_query($db, "SELECT * FROM `files` WHERE `link` LIKE '%iconscout.com%' AND `link` LIKE '%$id%'");
