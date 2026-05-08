@@ -444,7 +444,6 @@ if($tc == 'group' || $tc == 'supergroup') {
                     $from = $reply->from->id;
                     createFile($capt, 'video', $file_id, $from, $from_id);
                 }
-				# Character is how you treat someone who can do nothing for you.
                 elseif(isset($message->audio)) {
                     $file_id = $message->audio->file_id;
                     $from = $reply->from->id;
@@ -591,7 +590,8 @@ if($tc == 'group' || $tc == 'supergroup') {
                         }
                     }
                 }
-                elseif(isFind($name, 'pngtree_')) {
+				# pngtree
+				elseif(isFind($name, 'pngtree_')) {
                     $id = (int) filter_var($name, FILTER_SANITIZE_NUMBER_INT);
                     if(isset($id) && !empty($id) && is_numeric($id)) {
                         $res = mysqli_query($db, "SELECT * FROM `files` WHERE `link` LIKE '%pngtree.com%' AND `link` LIKE '%$id%'");
@@ -602,6 +602,7 @@ if($tc == 'group' || $tc == 'supergroup') {
                         }
                     }
                 }
+			# Character is how you treat someone who can do nothing for you.
             }
         }
     }
