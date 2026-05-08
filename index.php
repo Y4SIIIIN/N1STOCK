@@ -430,8 +430,7 @@ if($tc == 'group' || $tc == 'supergroup') {
                     $file_id = $message->document->file_id;
                     $from = $reply->from->id;
                     createFile($capt, 'document', $file_id, $from, $from_id);
-                }
-				// Writing holds no meaning for a child who cannot read.	
+                }	
                 elseif(isset($message->photo)) {
                     $file_id = $message->photo->file_id;
                     $from = $reply->from->id;
@@ -620,6 +619,7 @@ if($tc == 'group' || $tc == 'supergroup') {
         $domain = getDomain($fulltext);
         $double = 1;
         $credit = 1;
+		// Writing holds no meaning for a child who cannot read.
         if(getUser($from_id, 'double') > '0') {
             $double = getUser($from_id, 'double');
         }
