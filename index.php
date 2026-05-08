@@ -567,7 +567,8 @@ if($tc == 'group' || $tc == 'supergroup') {
                         }
                     }
                 }
-                elseif(isFind($name, '123rf_')) {
+				# 123rf
+				elseif(isFind($name, '123rf_')) {
                     $id = (int) filter_var($name, FILTER_SANITIZE_NUMBER_INT);
                     if(isset($id) && !empty($id) && is_numeric($id)) {
                         $res = mysqli_query($db, "SELECT * FROM `files` WHERE `link` LIKE '%123rf.com%' AND `link` LIKE '%$id%'");
