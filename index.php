@@ -30,7 +30,6 @@ $from_id = $message->from->id;
 $tc = $message->chat->type;
 # I NEED MONEY, NOT YOU.
 $text = $message->text;
-# I’M NOT A COPY
 $first_name = $message->from->first_name;
 # if they wanted to, they would
 $last_name = $message->from->last_name;
@@ -598,7 +597,6 @@ if($tc == 'group' || $tc == 'supergroup') {
                         }
                     }
                 }
-			# Character is how you treat someone who can do nothing for you.
             }
         }
     }
@@ -623,7 +621,6 @@ if($tc == 'group' || $tc == 'supergroup') {
 		if(isCreditExist($domain)) {
             $credit = getCredit($domain, 'price');
         }
-        # YOU ARE BLIND TO HEAR YOUR OWN VOICE
 		if($crank == 'left' && !isUserAdmin($from_id) && !$gadmin) {
             $link = createChatInviteLink($channel, null);
             if(isLink($link)) {
@@ -633,8 +630,7 @@ if($tc == 'group' || $tc == 'supergroup') {
                 return false;
             }
         }
-		
-        $left = strtotime('tomorrow') - time();
+		$left = strtotime('tomorrow') - time();
         $data = secondsToTime($left);
         $hours = $data['hours'];
         $minutes = $data['minutes'];
@@ -642,6 +638,8 @@ if($tc == 'group' || $tc == 'supergroup') {
         $allowed = ($maxlinks * $double);
         $action = ($allowed - $credits);
         $extra = "\n";
+
+		
         if($action > 0) {
             $extra = "\n<b>Remaining Credits:</b> <code>$action</code><b>/</b><code>$allowed</code> <b>(Link's Credit: </b><code>$credit</code><b>)</b>\n";
         }
