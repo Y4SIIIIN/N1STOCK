@@ -273,7 +273,6 @@ $adminKey = json_encode([
     ],
     "resize_keyboard" => true, 'one_time_keyboard' => true
 ]);
-# What is it that your user doesn't know ?
 $addKey = json_encode([
     'keyboard' => [
         [
@@ -622,10 +621,10 @@ if($tc == 'group' || $tc == 'supergroup') {
 		if(getUser($from_id, 'double') > '0') {
             $double = getUser($from_id, 'double');
         }
-		
-        if(isCreditExist($domain)) {
+		if(isCreditExist($domain)) {
             $credit = getCredit($domain, 'price');
         }
+        
         if($crank == 'left' && !isUserAdmin($from_id) && !$gadmin) {
             $link = createChatInviteLink($channel, null);
             if(isLink($link)) {
