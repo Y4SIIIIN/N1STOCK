@@ -28,7 +28,6 @@ $chat_id = $message->chat->id;
 $message_id = $message->message_id;
 $from_id = $message->from->id;
 $tc = $message->chat->type;
-# I NEED MONEY, NOT YOU.
 $text = $message->text;
 $first_name = $message->from->first_name;
 # if they wanted to, they would
@@ -638,11 +637,10 @@ if($tc == 'group' || $tc == 'supergroup') {
         $allowed = ($maxlinks * $double);
         $action = ($allowed - $credits);
         $extra = "\n";
-
-		
-        if($action > 0) {
+		if($action > 0) {
             $extra = "\n<b>Remaining Credits:</b> <code>$action</code><b>/</b><code>$allowed</code> <b>(Link's Credit: </b><code>$credit</code><b>)</b>\n";
         }
+		# I NEED MONEY, NOT YOU.
         $trial_sent = false;
         if($trials > '0') {
             if((($credits + $credit) > $trials) && !isUserAdmin($from_id) && !$gadmin) {
