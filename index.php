@@ -446,7 +446,6 @@ if($tc == 'group' || $tc == 'supergroup') {
                     $from = $reply->from->id;
                     createFile($capt, 'audio', $file_id, $from, $from_id);
                 }
-				# YOU ARE BLIND TO HEAR YOUR OWN VOICE
             }
         }
     }
@@ -624,16 +623,17 @@ if($tc == 'group' || $tc == 'supergroup') {
 		if(isCreditExist($domain)) {
             $credit = getCredit($domain, 'price');
         }
-        
-        if($crank == 'left' && !isUserAdmin($from_id) && !$gadmin) {
+        # YOU ARE BLIND TO HEAR YOUR OWN VOICE
+		if($crank == 'left' && !isUserAdmin($from_id) && !$gadmin) {
             $link = createChatInviteLink($channel, null);
             if(isLink($link)) {
                 deleteMessage($chat_id, $message_id);
-                sendMessage($chat_id, "[$mention]\n<b>You should join our channel to send links here</b>", -1, retIKey14($link));
+                sendMessage($chat_id, "Hi [$mention] \n\nIf you want to use \n the N1STOCK <b>SELLER PANEL</b>\n\n 👉🏻 https://Y4SIIIIN.COM/SELLERS-PANEL \n\n <b>WHATSAPP</b>\n\n 👉🏻 https://chat.whatsapp.com/KCpI3UxWliK5a0Z36yMPmG \n\n<b>You should join our channel to send links here</b>\nPlease click. What are you waiting for ? ↓", -1, retIKey14($link));
                 $send = false;
                 return false;
             }
         }
+		
         $left = strtotime('tomorrow') - time();
         $data = secondsToTime($left);
         $hours = $data['hours'];
