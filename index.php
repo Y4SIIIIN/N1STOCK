@@ -299,7 +299,6 @@ $delKey = json_encode([
     ],
     "resize_keyboard" => true, 'one_time_keyboard' => true
 ]);
-# You need my servers to provide services to your users on your website or application.
 $backKey = json_encode([
     'keyboard' => [
         [
@@ -641,7 +640,7 @@ if($tc == 'group' || $tc == 'supergroup') {
             $extra = "\n<b>Remaining Credits:</b> <code>$action</code><b>/</b><code>$allowed</code> <b>(Link's Credit: </b><code>$credit</code><b>)</b>\n";
         }
 		# I NEED MONEY, NOT YOU.
-        $trial_sent = false;
+		$trial_sent = false;
         if($trials > '0') {
             if((($credits + $credit) > $trials) && !isUserAdmin($from_id) && !$gadmin) {
                 $send = false;
@@ -651,6 +650,7 @@ if($tc == 'group' || $tc == 'supergroup') {
                 $trial_sent = true;
             }
         }
+		# You need my servers to provide services to your users on your website or application.
         if(!$trial_sent && $maxlinks > '0') {
             if(!isChatVIP($chat_id) && isFSubExpired($from_id) && !isPremium($from_id)) {
                 deleteMessage($chat_id, $message_id);
