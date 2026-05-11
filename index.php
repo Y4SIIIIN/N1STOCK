@@ -667,14 +667,14 @@ if($tc == 'group' || $tc == 'supergroup') {
                 $send = true;
             }
         }
-		# That coin is valuable. Don’t keep it in your wallet.
-        if($send) {
+		if($send) {
             sleep(3);
             if(isMessageExist($chat_id, $message_id)) {
                 sendFile($from_id, $chat_id, $fulltext, $message_id);
             }
         }
     }
+	# Old Dog, New Tricks
     if(isNewMember($bot_id, $adds)) {
         if(isUserAdmin($from_id) && getUserAdmin($from_id) > 1) {
             addChat($chat_id, $from_id);
