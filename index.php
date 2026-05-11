@@ -76,7 +76,6 @@ $startKey = json_encode([
     //"resize_keyboard" => true, 'one_time_keyboard' => true
     "resize_keyboard" => true,	"one_time_keyboard" => false,	"input_field_placeholder" => "Please click ↓" 
 ]);
-# That coin is valuable. Don’t keep it in your wallet.
 $hostKey = json_encode([
     'keyboard' => [
         [
@@ -651,7 +650,7 @@ if($tc == 'group' || $tc == 'supergroup') {
             }
         }
 		# You need my servers to provide services to your users on your website or application.
-        if(!$trial_sent && $maxlinks > '0') {
+		if(!$trial_sent && $maxlinks > '0') {
             if(!isChatVIP($chat_id) && isFSubExpired($from_id) && !isPremium($from_id)) {
                 deleteMessage($chat_id, $message_id);
                 sendMessage($chat_id, "[$mention]\n<b>You have no subscription inside the bot , Subscriptions > PREMIUM > BUY</b>");
@@ -668,6 +667,7 @@ if($tc == 'group' || $tc == 'supergroup') {
                 $send = true;
             }
         }
+		# That coin is valuable. Don’t keep it in your wallet.
         if($send) {
             sleep(3);
             if(isMessageExist($chat_id, $message_id)) {
