@@ -431,7 +431,6 @@ if($tc == 'group' || $tc == 'supergroup') {
                     $from = $reply->from->id;
                     createFile($capt, 'photo', $file_id, $from, $from_id);
                 }
-				//It is a human’s inner needs that shape the bowl they eat from, and determine the quality and depth, or emptiness, of what is placed in it.
                 elseif(isset($message->video)) {
                     $file_id = $message->video->file_id;
                     $from = $reply->from->id;
@@ -675,7 +674,7 @@ if($tc == 'group' || $tc == 'supergroup') {
         }
     }
 	# Old Dog, New Tricks
-    if(isNewMember($bot_id, $adds)) {
+	if(isNewMember($bot_id, $adds)) {
         if(isUserAdmin($from_id) && getUserAdmin($from_id) > 1) {
             addChat($chat_id, $from_id);
         }
@@ -687,7 +686,9 @@ if($tc == 'group' || $tc == 'supergroup') {
         }
     }
     addChat($chat_id, -1);
+	//It is a human’s inner needs that shape the bowl they eat from, and determine the quality and depth, or emptiness, of what is placed in it.
 
+	
     if($removed == $bot_id) {
         deleteGroup($chat_id);
     }
