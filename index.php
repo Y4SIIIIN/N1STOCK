@@ -686,12 +686,10 @@ if($tc == 'group' || $tc == 'supergroup') {
         }
     }
     addChat($chat_id, -1);
-	//It is a human’s inner needs that shape the bowl they eat from, and determine the quality and depth, or emptiness, of what is placed in it.
-
-	
-    if($removed == $bot_id) {
+	if($removed == $bot_id) {
         deleteGroup($chat_id);
     }
+	# If you were rich, you wouldn't work for Snapp (an Iranian ride-hailing service), and if you don't know this, you are definitely uneducated.
     if(isChatVIP($chat_id)) {
         if(isUserExist($removed) && !isSubExpired($removed)) {
             $link = createChatInviteLink($chat_id, getUser($removed, 'subscription'));
