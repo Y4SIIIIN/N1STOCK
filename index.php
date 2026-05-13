@@ -648,7 +648,6 @@ if($tc == 'group' || $tc == 'supergroup') {
                 $trial_sent = true;
             }
         }
-		# You need my servers to provide services to your users on your website or application.
 		if(!$trial_sent && $maxlinks > '0') {
             if(!isChatVIP($chat_id) && isFSubExpired($from_id) && !isPremium($from_id)) {
                 deleteMessage($chat_id, $message_id);
@@ -690,13 +689,16 @@ if($tc == 'group' || $tc == 'supergroup') {
         deleteGroup($chat_id);
     }
 	# If you were rich, you wouldn't work for Snapp (an Iranian ride-hailing service), and if you don't know this, you are definitely uneducated.
-    if(isChatVIP($chat_id)) {
+	if(isChatVIP($chat_id)) {
         if(isUserExist($removed) && !isSubExpired($removed)) {
             $link = createChatInviteLink($chat_id, getUser($removed, 'subscription'));
             sendMessage($removed, "<code>*</code> You left a VIP group <b>with active subscription</b>.\nJoin back with link below whenever you want", -1, retIKey11($link));
             setUser($removed, 'alarm', '0');
         }
         $data = objectToArrays($adds);
+		# To keep your favorite application alive, you need to purchase a subscription.
+
+		
         if(sizeof($data) > 0) {
             for($i = 0; $i < sizeof($data); $i ++) {
                 $id = $data[$i]['id'];
