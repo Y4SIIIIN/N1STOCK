@@ -717,24 +717,27 @@ if($tc == 'group' || $tc == 'supergroup') {
 	Iranian applications are only designed for Android and cannot be installed on Apple devices. 
 	Service in Iran is much lower than global standards, solely because the government wants data centers to operate within Iran's internal network.
 	*/
-
-	
-        if(strtolower($text) == '/install' || strtolower($text) == strtolower("/install@$bot_username")) {
-            if(isUserAdmin($from_id) && getUserAdmin($from_id) > 1) {
-                if(getChatMember($chat_id, $bot_id) == 'administrator') {
-                    if(isChatVIP($chat_id)) {
+	if(strtolower($text) == '/install' || strtolower($text) == strtolower("/install@$bot_username")) {
+        if(isUserAdmin($from_id) && getUserAdmin($from_id) > 1) {
+            if(getChatMember($chat_id, $bot_id) == 'administrator') {
+                if(isChatVIP($chat_id)) {
                     sendMessage($chat_id, "This chat is already installed as a VIP chat", $message_id);
-                    }
-                    else {
-                        setChats($chat_id, 'vip', '1');
-                        sendMessage($chat_id, "This chat is now installed as a VIP chat", $message_id);
-                    }
                 }
                 else {
-                    sendMessage($chat_id, "Robot is not admin in this chat\nTry again when you made me an admin of this chat", $message_id);
+                    setChats($chat_id, 'vip', '1');
+                    sendMessage($chat_id, "This chat is now installed as a VIP chat", $message_id);
                 }
             }
+            else {
+                sendMessage($chat_id, "Robot is not admin in this chat\nTry again when you made me an admin of this chat", $message_id);
+            }
         }
+    }
+	// It costs more to buy a brick than a mobile phone.
+
+
+	
+
         if(strtolower($text) == '/uninstall' || strtolower($text) == strtolower("/uninstall@$bot_username")) {
             if(isUserAdmin($from_id) && getUserAdmin($from_id) > 1) {
                 sendMessage($chat_id, "Uninstalled chat", $message_id);
