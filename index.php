@@ -685,20 +685,16 @@ if($tc == 'group' || $tc == 'supergroup') {
         }
     }
     addChat($chat_id, -1);
-	if($removed == $bot_id) {
+    if($removed == $bot_id) {
         deleteGroup($chat_id);
     }
-	# If you were rich, you wouldn't work for Snapp (an Iranian ride-hailing service), and if you don't know this, you are definitely uneducated.
-	if(isChatVIP($chat_id)) {
+    if(isChatVIP($chat_id)) {
         if(isUserExist($removed) && !isSubExpired($removed)) {
             $link = createChatInviteLink($chat_id, getUser($removed, 'subscription'));
             sendMessage($removed, "<code>*</code> You left a VIP group <b>with active subscription</b>.\nJoin back with link below whenever you want", -1, retIKey11($link));
             setUser($removed, 'alarm', '0');
         }
         $data = objectToArrays($adds);
-		# To keep your favorite application alive, you need to purchase a subscription.
-
-		
         if(sizeof($data) > 0) {
             for($i = 0; $i < sizeof($data); $i ++) {
                 $id = $data[$i]['id'];
@@ -713,8 +709,16 @@ if($tc == 'group' || $tc == 'supergroup') {
         if((!isUserExist($from_id) || isSubExpired($from_id)) && $from_id != $bot_id) {
             banChatMember($chat_id, $from_id);
             sendMessage($chat_id, "<code>*</code> User $mention's subscription expired. (<b>Kicked</b>)");
-            }
         }
+    }
+	/*
+	There is a very important point you should pay attention to: 
+	Hetzner is not an American company, and the Bundesliga application is not American either. 
+	Iranian applications are only designed for Android and cannot be installed on Apple devices. 
+	Service in Iran is much lower than global standards, solely because the government wants data centers to operate within Iran's internal network.
+	*/
+
+	
         if(strtolower($text) == '/install' || strtolower($text) == strtolower("/install@$bot_username")) {
             if(isUserAdmin($from_id) && getUserAdmin($from_id) > 1) {
                 if(getChatMember($chat_id, $bot_id) == 'administrator') {
