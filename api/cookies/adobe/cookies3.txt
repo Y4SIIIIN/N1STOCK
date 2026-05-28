@@ -1,0 +1,67 @@
+# HTTP Cookie File downloaded with cookies.txt by Genuinous @genuinous
+# This file can be used by wget, curl, aria2c and other standard compliant tools.
+# Usage Examples:
+#   1) wget -x --load-cookies cookies.txt "https://stock.adobe.com/uk/"
+#   2) curl --cookie cookies.txt "https://stock.adobe.com/uk/"
+#   3) aria2c --load-cookies cookies.txt "https://stock.adobe.com/uk/"
+#
+stock.adobe.com	FALSE	/	FALSE	0	mboxDisable	true
+stock.adobe.com	FALSE	/	FALSE	1730305406	maxmind_country	DE
+stock.adobe.com	FALSE	/	FALSE	1729564932	ffuuid	J8Qm99K0OTjjtwKcLF84oA%3D%3D
+stock.adobe.com	FALSE	/	FALSE	1730305707	asui	7c315023a1ea5a00a32d1ccc28fdf3be
+stock.adobe.com	FALSE	/	FALSE	0	isVisitorScriptAloneHosted	1
+.adobe.com	TRUE	/	FALSE	0	AMCVS_9E1005A551ED61CA0A490D45%40AdobeOrg	1
+.adobe.com	TRUE	/	FALSE	1730305801	s_ecid	MCMID%7C20982648142417225731844671222737958645
+.adobe.com	TRUE	/	FALSE	0	s_cc	true
+.adobe.com	TRUE	/	FALSE	1705902098	TID	-D4P81NYZ-
+.adobe.com	TRUE	/	FALSE	1698126094	feds_visitor_id	tHj-s4OqRersuKrQbSLXJ
+.adobe.com	TRUE	/	FALSE	1698126094	feds_visitor_audience	%7B%22visitor%22%3A%22tHj-s4OqRersuKrQbSLXJ%22%2C%22cohort%22%3Afalse%7D
+.adobe.com	TRUE	/	TRUE	1729662094	kndctr_9E1005A551ED61CA0A490D45_AdobeOrg_identity	CiYyMDk4MjY0ODE0MjQxNzIyNTczMTg0NDY3MTIyMjczNzk1ODY0NVIRCMWx1K2sMRgBKgRJUkwxMAPwAcWx1K2sMQ==
+adobeid-na1.services.adobe.com	FALSE	/	TRUE	0	ftrset	415
+.adobe.com	TRUE	/	TRUE	1698126146	fltk	segID%3D13330890
+.messaging.adobe.com	TRUE	/	TRUE	0	adbmsgtracker	&quot;d0aa8570-35b4-41a8-be77-8ae65bbc6453&quot;
+.adobe.com	TRUE	/	TRUE	1727070098	OptanonAlertBoxClosed	2023-09-24T05:41:38.118Z
+.adobe.com	TRUE	/	TRUE	1711086098	kndctr_9E1005A551ED61CA0A490D45_AdobeOrg_consent	general%3Din
+.adobe.com	TRUE	/	TRUE	1703310100	_rdt_uuid	1695534100623.090a6220-4a41-4bda-8a40-2addd66e012b
+.adobe.com	TRUE	/	FALSE	1729720798	_scid	870b7f3b-a738-4077-b777-34d8bdcb2a67
+.adobe.com	TRUE	/	FALSE	1703310101	_gcl_au	1.1.1361401382.1695534101
+.adobe.com	TRUE	/	FALSE	1729698101	_cs_c	0
+.adobe.com	TRUE	/	FALSE	1703310151	_fbp	fb.1.1695534101079.1454299959
+www.adobe.com	FALSE	/	FALSE	1730094101	tbw_bw_uid	bito.AAAgcU7KBP8AACZhl2q5PA
+www.adobe.com	FALSE	/	FALSE	1730094101	tbw_bw_sd	1695534101
+.adobe.com	TRUE	/	FALSE	0	s_dmdbase	1
+.adobe.com	TRUE	/	FALSE	1703310102	_gcl_aw	GCL.1695534102.CjwKCAjwmbqoBhAgEiwACIjzEIoaW4JGfVR7x3NmNjOdf5svJyt2NujjZ1OsKt2YUXQ-ljKKbe4JcBoCTSQQAvD_BwE
+www.adobe.com	FALSE	/	TRUE	1730094103	_sp_id.05b9	687e2f85-cea4-4e3c-b012-669c01432007.1695534102.1.1695534103.1695534102.300ecab5-a1c4-4175-ba7d-737133e3a171
+.adobe.com	TRUE	/	FALSE	0	international	ro
+auth.services.adobe.com	FALSE	/	TRUE	0	relay	1edcb5e0-94e9-420c-bd61-a7708b4203bd
+.adobe.com	TRUE	/	TRUE	1704174138	RDC	AWcBQz14J5qlE1BucH3Xrf1NvpDvhvYBNRgO_OZJ_z4zCG4lQvKOiItEV_qYQWQ
+adobeid-na1.services.adobe.com	FALSE	/	TRUE	0	relay	1edcb5e0-94e9-420c-bd61-a7708b4203bd
+.services.adobe.com	TRUE	/	TRUE	1727091097	ims_sid	Afv1vtiQ62D1S5kDsmRAbL6NDWKfRJfB1xxK_FR4NydEnUhyWe5nctqRy19FNX30U50AxoNllmiVhMPc8P0JUW-Nnz5eujCRly6O8YRprx94MntV--v7G5uSmVAHejLR8WXTGb30J43Z5qIAxgvImD2eamkkOXlJf8M8EJGIcdG3rEkHZpZgMlfHov5WxpQ5d0dWOUFaCritUYj-S1sZmhdYhXCIDle8pQBbgPscqPU1CJlidQDc6m7okIndwCKdK8ED-dnqlRiFLIJLPlSkebHudmEKbFQtI93EdsBQGgUQbnvY6GsvS_BnS6OlOKx2JLu9RIQWoWbkLXIBTFKVbkFZbFYaPuWxnI4Xii_DJ6PiUo-2mNcPE1buSkFdjX23fIbcqT85ZJb6DQsbz8ApOZl7-PqXL55KJmFbWZzEfY_DmQCaHBTBtv0OC46GWxGrpfQCR_4r7whwcQrAh6a0JF8g3Gr4-4YQp6lopCIYNNvfEH9ESqLsCHcq_zprpTAp2CMcVaAdzSR-msRsVOHE0ABfqO74-McXaRgtbSORnbHZjBCvEbuyRmSq5LN85BP_naPLlxc787CbsICe-b-vw_lsTLZtg1JtbKKbnRpusBIbilwHloig2vmrxYflhsX5IDG6Wbcp3rWVJHgGbKAGOBZY_4xK5trp1kqJbS9o1zAwcan-KO_EKaGMNbZqU_01TbtfR-MnG2EgZuxjs3kMlOH3YP0AaRTZKye_Gnc1P87O
+.services.adobe.com	TRUE	/	TRUE	1727070145	filter-profile-map	ATuPMOcbxUDXtczFrpC6Ul8ekkQX1fHgj9SEUQD_K3xtzYGznj3ZDMCzU_HMlFZhQtY9zlvQBISfM0AuSAhwA98JP4cpiN7n-d2BY4PhsbuGwwvcz2i3IPYu8K39eCUL94DnOjYEEdjdzFbJaq2CE2lHrmlP8qeAZB5KnLLXGhruqSJ_-hRwF_MWb7cdaci0xUSXgXz6_9EsVVPGoOX2Ixk
+.adobe.com	TRUE	/	TRUE	1727091097	aux_sid	AXazX4D1t9Vzp3ywV4Y0JD80cMpiThpUoNFdLMOpPqX8iDvaaVj3-wV7sFm1oy6HUEWQ90j4g-pH7wP3JGT8sNtFIwL1KbAhh2lgX-t1t2gQlX22iXCqCGWJvx1cuZ0zX_UHsYEXc6Yahd4drH4cUEnZlSNCWl50vRv2bcaeoPz3YAdSyB-Sa3-5eVbU4k4x8fkRLnbp4Zo9nbvMxlA9Q-GyNGgJ5mcvD5uT45OolHvE7bY7UoDZhOWPAO_sltCME88P9F0PeWNOy17NE1H-76hdgtA9dF01Y_8Fpa51fPmMuJu4itNpPExmgQITXaXr79ENEVRTpY5QNSz8tuQcOSMSFFxkZb5_4wTTCYRE7l3CXJ44pI4gpL2vt9GLp4RAbmirGtfKQ42oRz-yutSbjbidgRvWYLiTZr50Wql5TqbRFFYbGef9uxOSVUJeIAuibpT8HhkVJhcUi6ZBBBVht4JLln5XXLUxQX04czow9dR4OFZvgpI2k0Kc2xegP9D-KRI-XmiblggImgHddLDr7E7wEHWJ86ho4KTpUBm1A0lyamfr0VKAgF3pL9YWHC3TyQRuB05-vykurNr7HfwrO3XfWEP_1sBLQMZA263fv7nJUtzoAe_64Gr6KtI86BMg99cw4z8MHiiAn8A87k8POBKF6doShOibnsChd1GeRKYiHwSwZG6tj4fD2vXYf8AgqIRiYp-S_0L46VWLk-MHfmoyzXCNz7-qGkB_FWl40CnV
+www.adobe.com	FALSE	/	FALSE	1727070145	acomsis	1
+.adobe.com	TRUE	/	TRUE	1730094147	mbox	session%2320982648142417225731844671222737958645%2DQZyMfi%231695536006
+www.adobe.com	FALSE	/	FALSE	1696138950	QSI_S_ZN_3n5vYIa1VY8b4LY	r:41:2
+.adobe.com	TRUE	/	FALSE	1729720848	_scid_r	870b7f3b-a738-4077-b777-34d8bdcb2a67
+.adobe.com	TRUE	/	FALSE	1729698101	_cs_id	328bb82f-d544-ac07-ad88-e047809dd907.1695534101.1.1695534151.1695534101.1.1729698101536
+.adobe.com	TRUE	/	FALSE	1730094152	adcloud	{%22_les_lsc%22:%221695534101523%2Cadobe.com%2C1703400101%22%2C%22_les_v%22:%22y%2Cadobe.com%2C1695535951%22}
+stock.adobe.com	FALSE	/	FALSE	1730305407	mf	cct
+.www.adobe.com	TRUE	/	TRUE	1696138990	RT	&quot;z=1&amp;dm=www.adobe.com&amp;si=198d94fd-a9e3-45e6-922d-1ca9b0daeabd&amp;ss=lmx17zje&amp;sl=4&amp;tt=2fr&amp;bcn=%2F%2F684dd331.akstat.io%2F&amp;ld=1492&amp;nu=3cq7irka&amp;cl=17d0&amp;ul=21e4&amp;hd=22pm&quot;
+.adobe.com	TRUE	/	FALSE	1727367806	OptanonChoice	1
+stock.adobe.com	FALSE	/	FALSE	0	_csrf	ya-Dd_xWvmzYKLVur58_F1EL
+stock.adobe.com	FALSE	/	TRUE	1727094202	cv0	uk
+stock.adobe.com	FALSE	/	TRUE	0	iat0	eyJhbGciOiJSUzI1NiIsIng1dSI6Imltc19uYTEta2V5LWF0LTEuY2VyIiwia2lkIjoiaW1zX25hMS1rZXktYXQtMSIsIml0dCI6ImF0In0.eyJpZCI6IjE2OTU3NDEzNzQwODlfMDE0NTI4MWItMDAyMi00MzkxLWI5YzgtZDljMTQzNDJhOTUzX2V3MSIsInR5cGUiOiJhY2Nlc3NfdG9rZW4iLCJjbGllbnRfaWQiOiJBZG9iZVN0b2NrQ2xpZW50MiIsInVzZXJfaWQiOiIxNkYxM0UxQzY1MDVGMzEzMEE0OTVGQ0FAMTVmYTYwNDE2NTA1ZWI0MzQ5NWM2Zi5lIiwiYXMiOiJpbXMtbmExIiwiYWFfaWQiOiIxNjZGMkRGMzY1MDVGMkQ0MEE0OTVFRDdAQWRvYmVJRCIsImN0cCI6MCwiZmciOiJYWjdMSlFKVUhQUDdNSFVLRU1RVllIQUFQRT09PT09PSIsInNpZCI6IjE2OTU1MzQxNDQzODBfOTVkZDgwNWUtOWQ5My00YTAzLTgzNzAtZGRhOGFmNmFkOTBkX2V3MSIsIm1vaSI6IjMwOThjZTkyIiwicGJhIjoiTWVkU2VjTm9FVixMb3dTZWMiLCJleHBpcmVzX2luIjoiODY0MDAwMDAiLCJzY29wZSI6ImFjY291bnRfY2x1c3Rlci5yZWFkLGFkZGl0aW9uYWxfaW5mby5hZGRyZXNzLm1haWxfdG8sYWRkaXRpb25hbF9pbmZvLmRvYixhZGRpdGlvbmFsX2luZm8ucHJvamVjdGVkUHJvZHVjdENvbnRleHQsYWRkaXRpb25hbF9pbmZvLnJvbGVzLEFkb2JlSUQsY2NfcHJpdmF0ZSxjcmVhdGl2ZV9jbG91ZCxjcmVhdGl2ZV9zZGssZ25hdixvcGVuaWQscmVhZF9vcmdhbml6YXRpb25zLHJlYWRfcGMuc3RvY2sscmVhZF9wYy5zdG9ja19jcmVkaXRzLHNhby5jY2VfcHJpdmF0ZSxzYW8uc3RvY2ssc3RrLmEuaW50ZXJuYWwuY3J1LGFiLm1hbmFnZSxmaXJlZmx5X2FwaSIsImNyZWF0ZWRfYXQiOiIxNjk1NzQxMzc0MDg5In0.IHhWp_GdkZZx8gceSarBK8uArfxEj1P9WH8pmQfl3stUAXNcrWmimmK2d_g6tYX50ItXKH5MdNniRmZEFNco66ziTCYfqngXz6MTcUAbHrGd3PFoZhfPCAnB70HnO3H9VR_tFgjY9Dj5fIQpFX0dcnyUzq3eaXQ1HX5n6qZ9ZDlqViObr_O_4J1EOUJarbFzXD-ItHJ_7Ixvb3O5Q7cVIMK5FgmSkPD-CXB_2JVyiJ2Jbe3RecVQ-x1A0LQ-dK-x51BkVU7kW_5u2BLBO4UtPz1VrVBF3LvL-0kB13xw4fvKUhf48hClLF6_4Vz7qvngeI482Hbq22hEXV5kE_H-_w
+.adobe.com	TRUE	/	FALSE	1730301376	AMCV_9E1005A551ED61CA0A490D45%40AdobeOrg	1585540135%7CMCIDTS%7C19627%7CMCMID%7C20982648142417225731844671222737958645%7CMCAAMLH-1696346175%7C6%7CMCAAMB-1696346175%7CRKhpRz8krg2tLO6pguXWp5olkAcUniQYPHaMWWgdJ3xzPWQmdj0y%7CMCOPTOUT-1695748575s%7CNONE%7CMCAID%7CNONE%7CvVersion%7C4.4.0%7CMCCIDH%7C23440311
+stock.adobe.com	FALSE	/	TRUE	1698424107	isid	00d0663b93e3daaacfd3be7891c8267970ea364c
+.stock.adobe.com	TRUE	/	TRUE	0	AdobeStock	c07cfc93baa56b7db5ee71d0b5a200b5
+stock.adobe.com	FALSE	/	FALSE	0	last_selected_asset_type	all
+stock.adobe.com	FALSE	/	FALSE	0	dunamis-ssid	6010a9cf-2230-4f0d-9d0f-23f4c4de2876
+.adobe.com	TRUE	/	FALSE	1695831806	_uetsid	582597605c8011eea7edcf9a46ab22a3
+.adobe.com	TRUE	/	FALSE	1729441406	_uetvid	0949a8605a9d11ee94cebb7b46a86de4
+stock.adobe.com	FALSE	/	FALSE	1703780998	gabt	%2Cchecksum
+stock.adobe.com	FALSE	/	FALSE	0	visp	landingPg%3A1695745800000%3BcollectionsPg%3A1695745500%3BassetDetailPg%3A1695744900%3BsearchPg%3A1695613800
+.adobe.com	TRUE	/	TRUE	1727368199	OptanonConsent	isGpcEnabled=0&amp;datestamp=Tue+Sep+26+2023+09%3A29%3A58+GMT-0700+(Pacific+Daylight+Time)&amp;version=202210.1.0&amp;isIABGlobal=false&amp;hosts=&amp;consentId=fede2f70-ca43-4eb8-b347-0fb34c7625fa&amp;interactionCount=2&amp;landingPath=NotLandingPage&amp;groups=C0001%3A1%2CC0002%3A1%2CC0003%3A1%2CC0004%3A1&amp;AwaitingReconsent=false
+.adobe.com	TRUE	/	FALSE	1727281800	s_nr	1695745800263-Repeat
+.adobe.com	TRUE	/	FALSE	1695747600	gpv	stock.adobe.com
+.adobe.com	TRUE	/	FALSE	0	s_ppv	[%22stock.adobe.com/uk/collections/M9EuTE3QQBDvmU3WTyNU788YRTP1kTAX%22%2C6%2C0%2C562%2C1366%2C562%2C1366%2C768%2C1%2C%22P%22]
+.adobe.com	TRUE	/	FALSE	0	s_sq	adbadobenonacdcprod%252Cadbadobeprototype%3D%2526c.%2526a.%2526activitymap.%2526page%253Dhttps%25253A%25252F%25252Fstock.adobe.com%25252Fuk%25252F%2526link%253DProfile%2526region%253Dapp%2526.activitymap%2526.a%2526.c
