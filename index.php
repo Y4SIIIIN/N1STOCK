@@ -6,7 +6,12 @@ require 'config.php';
 $telegram = false;
 $telegram_ip_ranges = [
     ['lower' => '149.154.160.0', 'upper' => '149.154.175.255'],
-    ['lower' => '91.108.4.0', 'upper' => '91.108.7.255']
+    ['lower' => '91.108.4.0', 'upper' => '91.108.7.255'],
+    ['lower' => '91.108.8.0', 'upper' => '91.108.11.255'],
+    ['lower' => '91.108.12.0', 'upper' => '91.108.15.255'],
+    ['lower' => '91.108.16.0', 'upper' => '91.108.19.255'],
+    ['lower' => '91.108.20.0', 'upper' => '91.108.23.255'],
+    ['lower' => '91.108.56.0', 'upper' => '91.108.59.255'],
 ];
 $ip_dec = (float) sprintf("%u", ip2long(getIP()));
 foreach($telegram_ip_ranges as $telegram_ip_range) {
@@ -22,7 +27,7 @@ if(!$telegram) {
     echo json_encode(array('status' => false), 128).PHP_EOL;
     die;
 }
-
+//Using PHP Object
 $update = json_decode(file_get_contents('php://input'));
 $message = $update->message;
 $chat_id = $message->chat->id;
