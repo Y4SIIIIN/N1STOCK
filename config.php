@@ -3911,21 +3911,36 @@ function mentionUser($id, $name = true) {
     }
     return '<a href="tg://user?id='.$id.'">'.$fname.'</a>';
 }
+// Cloudflare + IPv4 + IPv6 
 function getIP($ip = null, $deep_detect = true){
-    if(filter_var($ip, FILTER_VALIDATE_IP) === false) {
-        $ip = $_SERVER["REMOTE_ADDR"];
-        if($deep_detect) {
-            if(filter_var(@$_SERVER['HTTP_X_FORWARDED_FOR'], FILTER_VALIDATE_IP))
-                $ip = $_SERVER['HTTP_X_FORWARDED_FOR'];
-            if(filter_var(@$_SERVER['HTTP_CLIENT_IP'], FILTER_VALIDATE_IP))
-                $ip = $_SERVER['HTTP_CLIENT_IP'];
-        }
+    if(filter_var($ip, FILTER_VALIDATE_IP)) {
+        return $ip;
     }
-	else {
-        $ip = $_SERVER["REMOTE_ADDR"];
+    $ip = $_SERVER["REMOTE_ADDR"];
+    if($deep_detect) {
+        // Cloudflare real IP 
+        if (!empty($_SERVER['HTTP_CF_CONNECTING_IP']) &&
+            filter_var($_SERVER['HTTP_CF_CONNECTING_IP'], FILTER_VALIDATE_IP)) {
+            $ip = $_SERVER['HTTP_CF_CONNECTING_IP'];
+        }
+        // X-Forwarded-For 
+        elseif (!empty($_SERVER['HTTP_X_FORWARDED_FOR'])) {
+            $forwarded_ips = explode(',', $_SERVER['HTTP_X_FORWARDED_FOR']);
+            $first_ip = trim($forwarded_ips[0]);
+
+            if (filter_var($first_ip, FILTER_VALIDATE_IP)) {
+                $ip = $first_ip;
+            }
+        }
+        // Client IP fallback
+        elseif (!empty($_SERVER['HTTP_CLIENT_IP']) &&
+            filter_var($_SERVER['HTTP_CLIENT_IP'], FILTER_VALIDATE_IP)) {
+            $ip = $_SERVER['HTTP_CLIENT_IP'];
+        }
     }
     return $ip;
 }
+
 function isLink($string) {
     $pattern = '/(http[s]?\:\/\/)?(?!\-)(?:[a-zA-Z\d\-]{0,62}[a-zA-Z\d]\.){1,126}(?!\d+)[a-zA-Z\d]{1,63}/';
     return preg_match($pattern, $string);
