@@ -1,51 +1,24 @@
 <?php
-// In order for your Telegram bot to provide services, you need a server outside of Iran.Currently, servers inside Iran cannot reliably communicate with Telegram servers.
 header('Content-Type: application/json');
 require 'config.php';
-/* -----------------------------
-   TELEGRAM SECRET TOKEN CHECK
-------------------------------*/
-$secret_token = 'YOUR_SECRET_TOKEN';
-if (
-    !isset($_SERVER['HTTP_X_TELEGRAM_BOT_API_SECRET_TOKEN']) ||
-    $_SERVER['HTTP_X_TELEGRAM_BOT_API_SECRET_TOKEN'] !== $secret_token
-) {
+/*
+|--------------------------------------------------------------------------
+| TELEGRAM WEBHOOK SECURITY (MODERN METHOD)
+|--------------------------------------------------------------------------
+*/
+
+$telegram_secret_token = "YOUR_SECRET_TOKEN_HERE";
+
+$received_secret_token = $_SERVER['HTTP_X_TELEGRAM_BOT_API_SECRET_TOKEN'] ?? null;
+if ($received_secret_token !== $telegram_secret_token) {
     http_response_code(403);
-    echo json_encode(['status' => false], JSON_UNESCAPED_UNICODE);
+    echo json_encode([
+        'status' => false,
+        'error' => 'Unauthorized request'
+    ], JSON_UNESCAPED_UNICODE);
     exit;
 }
-/* -----------------------------
-   TELEGRAM IP RANGE CHECK
-------------------------------*/
-$telegram = false;
-$telegram_ip_ranges = [
-    ['lower' => '149.154.160.0', 'upper' => '149.154.175.255'],
-    ['lower' => '91.108.4.0', 'upper' => '91.108.7.255'],
-    ['lower' => '91.108.8.0', 'upper' => '91.108.11.255'],
-    ['lower' => '91.108.12.0', 'upper' => '91.108.15.255'],
-    ['lower' => '91.108.16.0', 'upper' => '91.108.19.255'],
-    ['lower' => '91.108.20.0', 'upper' => '91.108.23.255'],
-    ['lower' => '91.108.56.0', 'upper' => '91.108.59.255'],
-];
-// IP
-$ip_dec = sprintf("%u", ip2long(getIP()));
-foreach ($telegram_ip_ranges as $telegram_ip_range) {
 
-    if (!$telegram) {
-
-        $lower_dec = sprintf("%u", ip2long($telegram_ip_range['lower']));
-        $upper_dec = sprintf("%u", ip2long($telegram_ip_range['upper']));
-
-        if ($ip_dec >= $lower_dec && $ip_dec <= $upper_dec) {
-            $telegram = true;
-        }
-    }
-}
-if (!$telegram) {
-    http_response_code(403);
-    echo json_encode(['status' => false], JSON_UNESCAPED_UNICODE);
-    exit;
-}
 //Using PHP Object
 $update = json_decode(file_get_contents('php://input'));
 $message = $update->message;
