@@ -22,7 +22,6 @@ if ($received_secret_token !== $telegram_secret_token) {
 //Using PHP Object
 $update = json_decode(file_get_contents('php://input'));
 $message = $update->message;
-//Writing holds no meaning for a child who cannot read.
 
 
 $chat_id = $message->chat->id;
