@@ -1,4 +1,5 @@
 <?php
+// fyi free fries when u spend $1 in the app today aka bad day to be a potato
 header('Content-Type: application/json');
 require 'config.php';
 /*
