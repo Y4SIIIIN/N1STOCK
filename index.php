@@ -3,6 +3,7 @@
 header('Content-Type: application/json');
 // I have my head in the clouds and my feet on the ground.
 require 'config.php';
+// You’re being left on read. I’m in their hand. We are not the same.
 /*
 |--------------------------------------------------------------------------
 | TELEGRAM WEBHOOK SECURITY (MODERN METHOD)
