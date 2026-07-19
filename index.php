@@ -9,7 +9,6 @@ require 'config.php';
 | TELEGRAM WEBHOOK SECURITY (MODERN METHOD)
 |--------------------------------------------------------------------------
 */
-
 $telegram_secret_token = "YOUR_SECRET_TOKEN_HERE";
 
 $received_secret_token = $_SERVER['HTTP_X_TELEGRAM_BOT_API_SECRET_TOKEN'] ?? null;
@@ -21,9 +20,9 @@ if ($received_secret_token !== $telegram_secret_token) {
     ], JSON_UNESCAPED_UNICODE);
     exit;
 }
-
-//Using PHP Object
+// That’s one small paw for a cat, one giant leap for catkind.
 $update = json_decode(file_get_contents('php://input'));
+//Using PHP Object
 $message = $update->message;
 
 
