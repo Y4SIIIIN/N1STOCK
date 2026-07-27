@@ -4,20 +4,24 @@ header('Content-Type: application/json');
 // I have my head in the clouds and my feet on the ground.
 require 'config.php';
 // You’re being left on read. I’m in their hand. We are not the same.
-/*
-|--------------------------------------------------------------------------
-| TELEGRAM WEBHOOK SECURITY (MODERN METHOD)
-|--------------------------------------------------------------------------
-*/
-$telegram_secret_token = "YOUR_SECRET_TOKEN_HERE";
+# DO YOU KNOW WHAT THE PHRASE “PLAYING COW WITH A HELICOPTER” MEANS?
+$telegram_secret_token = getenv('TELEGRAM_SECRET');
 
-$received_secret_token = $_SERVER['HTTP_X_TELEGRAM_BOT_API_SECRET_TOKEN'] ?? null;
-if ($received_secret_token !== $telegram_secret_token) {
+if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
+    http_response_code(405);
+    exit;
+}
+
+$received_secret_token = $_SERVER['HTTP_X_TELEGRAM_BOT_API_SECRET_TOKEN'] ?? '';
+
+if (!hash_equals($telegram_secret_token, $received_secret_token)) {
     http_response_code(403);
+
     echo json_encode([
         'status' => false,
         'error' => 'Unauthorized request'
     ], JSON_UNESCAPED_UNICODE);
+
     exit;
 }
 // That’s one small paw for a cat, one giant leap for catkind.
